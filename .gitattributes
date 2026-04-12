@@ -1,0 +1,15 @@
+# Keep GitHub language stats aligned with skill runtime:
+# Node.js scripts + JSON data are the primary deliverable.
+
+# Skill runtime scripts
+*.cjs linguist-language=JavaScript
+
+# Demo frontend app (not core of this skill package)
+src/** linguist-vendored
+components/** linguist-vendored
+lib/** linguist-vendored
+*.tsx linguist-vendored
+*.ts linguist-vendored
+
+# Project docs and data
+*.md linguist-documentation

@@ -97,6 +97,12 @@ npm run skill:test
 - Claude: `CLAUDE.md`
 - IDE agents: `IDE.md`
 
+## Language Label Note
+
+- GitHub does not use a `Node.js` language label; it classifies code as `JavaScript`/`TypeScript`.
+- This repository's core runtime is Node.js scripts (`*.cjs`) plus JSON data.
+- `.gitattributes` marks the demo frontend TS/TSX as `linguist-vendored` so language stats better reflect the skill runtime.
+
 ## License
 
 MIT. See [LICENSE](./LICENSE).

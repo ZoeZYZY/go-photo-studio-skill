@@ -152,6 +152,12 @@ npm run skill:test
 
 环境变量参考：`.env.example`
 
+## 语言标记说明
+
+- GitHub 语言统计不使用“Node.js”标签，而是显示为 `JavaScript`。
+- 本仓库核心执行层为 Node.js（`*.cjs`）+ JSON 数据文件。
+- 已通过 `.gitattributes` 对演示前端（TS/TSX）做 `linguist-vendored`，避免其主导仓库语言标记。
+
 ## 合规说明
 
 - 默认公开 preset 不包含实名明星风格。
