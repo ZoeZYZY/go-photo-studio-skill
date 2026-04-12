@@ -17,7 +17,7 @@ GO Photo Studio is a high-end AI-powered portrait studio that transforms casual 
 - **Frontend**: React 18 + Vite
 - **Styling**: Tailwind CSS (Comic Pop Aesthetic)
 - **UI Components**: Shadcn/UI + Framer Motion
-- **AI Engine**: Google Gemini 1.5 Flash (Multimodal)
+- **AI Engine**: Gemini / OpenAI (provider-switchable)
 - **Image Processing**: Browser Canvas API for pre-processing and composition correction.
 
 ## 🧩 Reusable Skill Package
@@ -55,20 +55,23 @@ The frontend reads style presets from `skills/go-photo-studio/references/presets
 | Category | Style | Key Visual |
 | :--- | :--- | :--- |
 | **Professional** | Studio Classic | Clean grey gradient, executive framing, natural skin. |
-| **ID & Visa** | Himo Blue | Artistic blue background, biometric standard. |
+| **Professional** | Tech Founder | Bright workspace bokeh, modern approachable profile. |
 | **Resume** | Modern Resume | Bright, approachable, high-end corporate feel. |
+| **ID** | ID Standard | Plain background, centered framing, neutral expression. |
 
 ## 🎨 Available Styles
 
-### 👔 Professional
-- **Studio Classic**: Executive studio portrait with clean business framing.
-- **Tech Founder**: Modern, bright, approachable professional look.
+The style source of truth is:
+- `skills/go-photo-studio/references/presets.json`
 
-### 📄 Resume
-- **Modern Resume**: Neutral and clean profile style for CV and online profiles.
+Current preset listing:
 
-### 🛂 ID
-- **ID Standard**: Neutral-expression ID-style baseline output.
+| Preset ID | Label | Category | Best For | Negative Constraint Focus |
+| :--- | :--- | :--- | :--- | :--- |
+| `studio-classic` | Studio Classic | professional | Corporate leadership, LinkedIn | No extreme close-up, no waxy skin |
+| `tech-founder` | Tech Founder | professional | Startup/founder profile | No noir look, no heavy boardroom staging |
+| `resume-modern` | Modern Resume | resume | CV / job applications | No fashionized output, no cartoon rendering |
+| `id-standard` | ID Standard | id | Neutral ID-style portrait | No dramatic shadows, no creative color cast |
 
 ## ⚙️ How It Works (The Master Strategy)
 
