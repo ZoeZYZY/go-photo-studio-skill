@@ -1,6 +1,12 @@
-# Evaluation Set Template
+# Evaluation Set
 
-Prepare a JSON file with records shaped like:
+This directory now includes a starter labeled set:
+
+- `eval.json` (12 records)
+- positive/negative labels mixed
+- metrics aligned with Stage E contracts
+
+You can extend the file with your own annotated results. Record shape:
 
 ```json
 [
@@ -18,8 +24,8 @@ Prepare a JSON file with records shaped like:
 ]
 ```
 
-Then run calibration:
+Run calibration:
 
 ```bash
-node skills/go-photo-studio/scripts/calibrate-thresholds.cjs --input eval.json --output skills/go-photo-studio/references/verification-thresholds.json
+node skills/go-photo-studio/scripts/calibrate-thresholds.cjs --input skills/go-photo-studio/references/eval/eval.json --output skills/go-photo-studio/references/verification-thresholds.json
 ```

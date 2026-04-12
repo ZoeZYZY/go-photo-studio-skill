@@ -112,4 +112,6 @@ The composed payload must include:
 - Pipeline spec: `references/pipeline.md`
 - Verification thresholds: `references/verification-thresholds.json`
 - Status tracker: `references/status.md`
-- Eval template: `references/eval/README.md`
+- Eval dataset/template: `references/eval/eval.json` and `references/eval/README.md`
+- Example requests/outputs: `examples/`
+- Smoke tests: `tests/smoke.cjs`

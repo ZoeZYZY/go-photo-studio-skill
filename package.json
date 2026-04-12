@@ -1,5 +1,5 @@
 {
-  "name": "react-example",
+  "name": "go-photo-studio-skill",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +8,12 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "skill:validate:example": "node skills/go-photo-studio/scripts/validate_request.cjs --input skills/go-photo-studio/examples/requests/resume-modern.zh.json",
+    "skill:compose:example": "node skills/go-photo-studio/scripts/compose_prompt.cjs --input skills/go-photo-studio/examples/requests/resume-modern.zh.json",
+    "skill:pipeline:dryrun": "node skills/go-photo-studio/scripts/run-pipeline.cjs --request skills/go-photo-studio/examples/requests/resume-modern.zh.json --provider gemini --outdir .pipeline-out",
+    "skill:calibrate": "node skills/go-photo-studio/scripts/calibrate-thresholds.cjs --input skills/go-photo-studio/references/eval/eval.json --output skills/go-photo-studio/references/verification-thresholds.json",
+    "skill:test": "node skills/go-photo-studio/tests/smoke.cjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",

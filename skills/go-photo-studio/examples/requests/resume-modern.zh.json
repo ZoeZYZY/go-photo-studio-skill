@@ -1,0 +1,7 @@
+{
+  "image_uri": "./samples/source-portrait-a.jpg",
+  "preset_id": "resume-modern",
+  "output_ratio": "4:5",
+  "language": "zh",
+  "constraints": "保持发际线和眼袋细节，背景简洁，不要磨皮。"
+}

@@ -106,9 +106,11 @@ export default function App() {
   const [isDownloadDialogOpen, setIsDownloadDialogOpen] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const presetCategoryIds: string[] = Array.from(new Set(presets.map((preset) => String(preset.category))));
+
   const categories = [
     { id: "all", label: CATEGORY_LABELS.all },
-    ...Array.from(new Set(presets.map((preset) => preset.category))).map((id) => ({
+    ...presetCategoryIds.map((id) => ({
       id,
       label: CATEGORY_LABELS[id] || `${id} | ${id}`,
     })),

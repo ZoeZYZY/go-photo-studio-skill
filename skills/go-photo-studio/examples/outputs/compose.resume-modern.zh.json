@@ -1,0 +1,21 @@
+{
+  "image_uri": "./samples/source-portrait-a.jpg",
+  "system_prompt": "You are an identity-preserving portrait generation assistant. Preserve facial geometry, age cues, skin micro-texture, and ethnicity. Do not perform face swap, impersonation, or deceptive transformations.",
+  "style_prompt": "Clean resume portrait, minimal background, neutral color palette, natural expression, high-fidelity skin micro-texture.",
+  "user_prompt": "Apply preset: Modern Resume. Output ratio: 4:5. Additional constraints: 保持发际线和眼袋细节，背景简洁，不要磨皮。.",
+  "negative_constraints": [
+    "overly stylized fashion look",
+    "exaggerated makeup",
+    "cartoon-like rendering"
+  ],
+  "metadata": {
+    "skill": "go-photo-studio",
+    "version": "1.1.0",
+    "preset_id": "resume-modern",
+    "preset_category": "resume",
+    "language": "zh",
+    "output_ratio": "4:5",
+    "constraints_sanitized": false,
+    "constraints_sanitization_reasons": []
+  }
+}

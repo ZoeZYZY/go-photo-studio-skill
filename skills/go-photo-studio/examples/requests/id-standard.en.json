@@ -1,0 +1,7 @@
+{
+  "image_uri": "./samples/source-portrait-b.jpg",
+  "preset_id": "id-standard",
+  "output_ratio": "1:1",
+  "language": "en",
+  "constraints": "Neutral expression, centered face, no beauty-filter look."
+}

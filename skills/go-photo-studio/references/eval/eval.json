@@ -1,0 +1,134 @@
+[
+  {
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.91,
+      "deterministic_identity_similarity": 0.75,
+      "composition_compliance": 0.88,
+      "realism_score": 0.84,
+      "artifact_risk": 0.14
+    }
+  },
+  {
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.89,
+      "deterministic_identity_similarity": 0.72,
+      "composition_compliance": 0.86,
+      "realism_score": 0.81,
+      "artifact_risk": 0.16
+    }
+  },
+  {
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.87,
+      "deterministic_identity_similarity": 0.71,
+      "composition_compliance": 0.83,
+      "realism_score": 0.79,
+      "artifact_risk": 0.18
+    }
+  },
+  {
+    "ratio": "4:5",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.72,
+      "deterministic_identity_similarity": 0.59,
+      "composition_compliance": 0.68,
+      "realism_score": 0.63,
+      "artifact_risk": 0.39
+    }
+  },
+  {
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.9,
+      "deterministic_identity_similarity": 0.74,
+      "composition_compliance": 0.9,
+      "realism_score": 0.83,
+      "artifact_risk": 0.12
+    }
+  },
+  {
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.88,
+      "deterministic_identity_similarity": 0.7,
+      "composition_compliance": 0.87,
+      "realism_score": 0.8,
+      "artifact_risk": 0.18
+    }
+  },
+  {
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.86,
+      "deterministic_identity_similarity": 0.69,
+      "composition_compliance": 0.82,
+      "realism_score": 0.77,
+      "artifact_risk": 0.2
+    }
+  },
+  {
+    "ratio": "1:1",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.73,
+      "deterministic_identity_similarity": 0.6,
+      "composition_compliance": 0.65,
+      "realism_score": 0.66,
+      "artifact_risk": 0.41
+    }
+  },
+  {
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.85,
+      "deterministic_identity_similarity": 0.68,
+      "composition_compliance": 0.8,
+      "realism_score": 0.76,
+      "artifact_risk": 0.21
+    }
+  },
+  {
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.84,
+      "deterministic_identity_similarity": 0.67,
+      "composition_compliance": 0.79,
+      "realism_score": 0.75,
+      "artifact_risk": 0.23
+    }
+  },
+  {
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.86,
+      "deterministic_identity_similarity": 0.69,
+      "composition_compliance": 0.84,
+      "realism_score": 0.78,
+      "artifact_risk": 0.2
+    }
+  },
+  {
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.7,
+      "deterministic_identity_similarity": 0.58,
+      "composition_compliance": 0.62,
+      "realism_score": 0.61,
+      "artifact_risk": 0.44
+    }
+  }
+]

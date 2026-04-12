@@ -9,6 +9,8 @@
 - `skills/go-photo-studio/scripts/validate_request.cjs`
 - `skills/go-photo-studio/scripts/compose_prompt.cjs`
 - `skills/go-photo-studio/scripts/run-pipeline.cjs`
+3. 示例请求：`skills/go-photo-studio/examples/requests/`
+4. 冒烟测试：`npm run skill:test`
 
 ## Claude 可直接使用的任务描述（复制即用）
 

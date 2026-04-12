@@ -11,17 +11,21 @@ Public repository: https://github.com/ZoeZYZY/go-photo-studio-skill
 - Frontend generation now includes post-generation quality gate with one automatic retry under stronger constraints.
 - Deterministic local identity metric added (`deterministic-identity-score.py`) and integrated into Stage E decisions.
 - Threshold calibration workflow added (`calibrate-thresholds.cjs` + eval template).
+- Starter labeled eval dataset committed (`references/eval/eval.json`).
+- Runnable examples committed (`examples/requests/*` + `examples/outputs/*`).
+- Smoke test added for CLI contracts (`tests/smoke.cjs`).
+- NPM execution scripts added (`skill:*`) for local reproducibility.
 
 ## Current Risk Assessment
 - High risk: downgraded from RED to YELLOW (core safeguards exist but rely on model quality and key availability).
 - Medium risk: partially mitigated; remaining issues are mainly calibration and production integration depth.
 
 ## Remaining Gaps
-- No benchmark dataset committed yet (template is ready, but project still needs curated labeled samples).
+- Dataset is still starter-scale and should be expanded with real-world samples and reviewer agreement checks.
 - Deterministic metric currently hash/histogram-based and should be upgraded to embedding-based scoring for production-grade identity checks.
 - Frontend provider runtime supports `gemini/openai`; anthropic is analysis-only in current UI path.
 
 ## Next Priority
-1. Add validation dataset + calibration script for `verification-thresholds.json`.
+1. Expand `eval.json` from starter set to benchmark-grade dataset with per-style stratification.
 2. Add deterministic identity similarity scorer (embedding-based) for Stage E.
 3. Align frontend runtime with provider adapters used by scripts.

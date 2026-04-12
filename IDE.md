@@ -32,6 +32,8 @@ cat .pipeline-out/pipeline-summary.json
 
 - 风格源：`skills/go-photo-studio/references/presets.json`
 - 验证阈值：`skills/go-photo-studio/references/verification-thresholds.json`
+- 评估数据：`skills/go-photo-studio/references/eval/eval.json`
+- 示例请求：`skills/go-photo-studio/examples/requests/`
 - 状态记录：`skills/go-photo-studio/references/status.md`
 
 ## 跨平台复用建议

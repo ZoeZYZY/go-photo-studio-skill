@@ -59,7 +59,38 @@ Source: `skills/go-photo-studio/references/presets.json`
 node skills/go-photo-studio/scripts/validate_request.cjs --input request.json
 node skills/go-photo-studio/scripts/compose_prompt.cjs --input request.json
 node skills/go-photo-studio/scripts/run-pipeline.cjs --request request.json --generated output.png --provider gemini
+node skills/go-photo-studio/scripts/calibrate-thresholds.cjs --input skills/go-photo-studio/references/eval/eval.json --output skills/go-photo-studio/references/verification-thresholds.json
 ```
+
+## Execution Env (NPM Scripts)
+
+```bash
+npm run skill:validate:example
+npm run skill:compose:example
+npm run skill:pipeline:dryrun
+npm run skill:calibrate
+npm run skill:test
+```
+
+## Example Cases and Test Data
+
+- Requests:
+  - `skills/go-photo-studio/examples/requests/resume-modern.zh.json`
+  - `skills/go-photo-studio/examples/requests/id-standard.en.json`
+  - `skills/go-photo-studio/examples/requests/invalid-missing-ratio.json`
+- Example output:
+  - `skills/go-photo-studio/examples/outputs/compose.resume-modern.zh.json`
+- Eval data:
+  - `skills/go-photo-studio/references/eval/eval.json`
+
+## Structure
+
+- Skill entry: `skills/go-photo-studio/SKILL.md`
+- References: `skills/go-photo-studio/references/`
+- Scripts: `skills/go-photo-studio/scripts/`
+- Examples: `skills/go-photo-studio/examples/`
+- Smoke test: `skills/go-photo-studio/tests/smoke.cjs`
+- Status: `skills/go-photo-studio/references/status.md`
 
 ## Integration Docs
 
