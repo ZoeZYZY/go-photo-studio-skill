@@ -27,6 +27,7 @@ function q(values, quantile) {
 function collect(records) {
   const positives = records.filter((r) => r.label_pass === true);
   const byRatio = {};
+  const byPreset = {};
 
   const metricsFor = (rows, key) => rows
     .map((r) => Number(r?.metrics?.[key]))
@@ -60,7 +61,15 @@ function collect(records) {
     }
   }
 
-  return { default: defaultProfile, by_ratio: byRatio };
+  const presetIds = [...new Set(records.map((r) => r.preset_id).filter(Boolean))];
+  for (const presetId of presetIds) {
+    const pos = positives.filter((r) => r.preset_id === presetId);
+    if (pos.length >= 3) {
+      byPreset[presetId] = makeProfile(pos);
+    }
+  }
+
+  return { default: defaultProfile, by_ratio: byRatio, by_preset: byPreset };
 }
 
 function withFallbacks(profile, fallback) {
@@ -95,6 +104,7 @@ function main() {
     const out = {
       default: withFallbacks(raw.default || {}, fallback),
       by_ratio: {},
+      by_preset: {},
       calibrated_from: {
         records: records.length,
         positives: records.filter((r) => r.label_pass === true).length,
@@ -103,6 +113,9 @@ function main() {
 
     for (const [ratio, profile] of Object.entries(raw.by_ratio || {})) {
       out.by_ratio[ratio] = withFallbacks(profile, out.default);
+    }
+    for (const [presetId, profile] of Object.entries(raw.by_preset || {})) {
+      out.by_preset[presetId] = withFallbacks(profile, out.default);
     }
 
     fs.writeFileSync(path.resolve(args.output), JSON.stringify(out, null, 2) + '\n');

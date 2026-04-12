@@ -21,6 +21,9 @@ Public repository: https://github.com/ZoeZYZY/go-photo-studio-skill
 - Embedding-based Python identity scorer added (`scripts/embedding-identity-score.py`) and wired into Stage E gate when available.
 - Pipeline telemetry log and quality dashboard added (`.pipeline-history/runs.ndjson` + `scripts/build-quality-dashboard.cjs`).
 - User feedback intake expanded with generation feedback issue template.
+- Preset-stratified eval fixture set added (`references/eval/eval.fixture.112.json`) with generation script.
+- Threshold calibration now supports `by_preset` profiles in addition to global and ratio profiles.
+- Mock generator upgraded to deterministic portrait-like PNG fixture (non-trivial test artifact).
 - Python dependency boundary clarified (`scripts/requirements.txt` for deterministic scorer only).
 
 ## Current Risk Assessment
@@ -29,7 +32,7 @@ Public repository: https://github.com/ZoeZYZY/go-photo-studio-skill
 
 ## Remaining Gaps
 - Dataset is still starter-scale and should be expanded with real-world samples and reviewer agreement checks.
-- Deterministic metric currently hash/histogram-based and should be upgraded to embedding-based scoring for production-grade identity checks.
+- Deterministic hash/histogram metric remains as fallback; production-grade deployments should prioritize embedding scorer availability.
 - Frontend provider runtime supports `gemini/openai`; anthropic is analysis-only in current UI path.
 - Script-level i18n currently supports `language=en|zh`; docs are multilingual but runtime locale support is narrower.
 - Embedding scorer currently depends on optional third-party models/packages (`insightface`, `onnxruntime`) and may be unavailable in minimal environments.

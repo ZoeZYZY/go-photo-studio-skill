@@ -181,6 +181,7 @@ function main() {
       timestamp: new Date().toISOString(),
       provider: args.provider,
       model: args.model,
+      preset_id: baseRequest.preset_id || null,
       request_path: requestPath,
       outdir: path.resolve(args.outdir),
       accepted: Boolean(final.accepted),

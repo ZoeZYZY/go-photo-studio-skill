@@ -46,6 +46,7 @@ function buildStats(rows) {
   const retryRuns = rows.filter((r) => Number(r.retries_used || 0) > 0).length;
 
   const byProvider = {};
+  const byPreset = {};
   for (const row of rows) {
     const provider = row.provider || 'unknown';
     if (!byProvider[provider]) {
@@ -54,6 +55,14 @@ function buildStats(rows) {
     byProvider[provider].total_runs += 1;
     if (row.accepted) byProvider[provider].accepted_runs += 1;
     else byProvider[provider].failed_runs += 1;
+
+    const preset = row.preset_id || 'unknown';
+    if (!byPreset[preset]) {
+      byPreset[preset] = { total_runs: 0, accepted_runs: 0, failed_runs: 0, avg_retries: 0 };
+    }
+    byPreset[preset].total_runs += 1;
+    if (row.accepted) byPreset[preset].accepted_runs += 1;
+    else byPreset[preset].failed_runs += 1;
   }
 
   for (const [provider, stat] of Object.entries(byProvider)) {
@@ -62,6 +71,14 @@ function buildStats(rows) {
       .map((r) => Number(r.retries_used || 0))
       .filter(Number.isFinite);
     stat.avg_retries = Number(avg(providerRetries).toFixed(3));
+    stat.failure_rate = stat.total_runs > 0 ? Number((stat.failed_runs / stat.total_runs).toFixed(4)) : 0;
+  }
+  for (const [preset, stat] of Object.entries(byPreset)) {
+    const presetRetries = rows
+      .filter((r) => (r.preset_id || 'unknown') === preset)
+      .map((r) => Number(r.retries_used || 0))
+      .filter(Number.isFinite);
+    stat.avg_retries = Number(avg(presetRetries).toFixed(3));
     stat.failure_rate = stat.total_runs > 0 ? Number((stat.failed_runs / stat.total_runs).toFixed(4)) : 0;
   }
 
@@ -78,6 +95,7 @@ function buildStats(rows) {
       avg_retries: Number(avg(retries).toFixed(3)),
     },
     by_provider: byProvider,
+    by_preset: byPreset,
     recent_runs: recent,
   };
 }
@@ -85,6 +103,11 @@ function buildStats(rows) {
 function toMarkdown(stats) {
   const t = stats.totals;
   const providers = Object.entries(stats.by_provider)
+    .map(([name, s]) => `| ${name} | ${s.total_runs} | ${s.failed_runs} | ${s.failure_rate} | ${s.avg_retries} |`)
+    .join('\n');
+  const presets = Object.entries(stats.by_preset)
+    .sort((a, b) => b[1].total_runs - a[1].total_runs)
+    .slice(0, 15)
     .map(([name, s]) => `| ${name} | ${s.total_runs} | ${s.failed_runs} | ${s.failure_rate} | ${s.avg_retries} |`)
     .join('\n');
 
@@ -106,6 +129,12 @@ function toMarkdown(stats) {
     '| Provider | Total runs | Failed runs | Failure rate | Avg retries |',
     '| :--- | ---: | ---: | ---: | ---: |',
     providers || '| (none) | 0 | 0 | 0 | 0 |',
+    '',
+    '## Preset Breakdown (Top 15 by run volume)',
+    '',
+    '| Preset | Total runs | Failed runs | Failure rate | Avg retries |',
+    '| :--- | ---: | ---: | ---: | ---: |',
+    presets || '| (none) | 0 | 0 | 0 | 0 |',
     '',
     '## Notes',
     '',

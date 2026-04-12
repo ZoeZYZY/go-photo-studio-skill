@@ -9,6 +9,7 @@ const root = path.resolve(__dirname, '../../..');
 const scriptsDir = path.resolve(root, 'skills/go-photo-studio/scripts');
 const examplesDir = path.resolve(root, 'skills/go-photo-studio/examples');
   const evalFile = path.resolve(root, 'skills/go-photo-studio/references/eval/eval.json');
+  const fixtureEvalFile = path.resolve(root, 'skills/go-photo-studio/references/eval/eval.fixture.112.json');
   const tmpDir = path.resolve(root, '.tmp-skill-smoke');
   const metricsLog = path.resolve(tmpDir, 'runs.ndjson');
 
@@ -68,6 +69,9 @@ function main() {
   assert.strictEqual(calibrate.code, 0, `calibrate-thresholds should pass: ${calibrate.stdout}\n${calibrate.stderr}`);
   assert.ok(fs.existsSync(calibratedOutput), 'calibration output file should exist');
 
+  const fixtureRows = JSON.parse(fs.readFileSync(fixtureEvalFile, 'utf8'));
+  assert.ok(Array.isArray(fixtureRows) && fixtureRows.length >= 100, 'fixture eval set should include >=100 records');
+
   const pipeline = runNode(path.resolve(scriptsDir, 'run-pipeline.cjs'), [
     '--request', validRequest,
     '--provider', 'gemini',
@@ -95,7 +99,10 @@ function main() {
     '--max-retries', '0',
   ]);
   assert.strictEqual(mockPipeline.code, 0, `run-pipeline mock e2e should exit 0: ${mockPipeline.stdout}\n${mockPipeline.stderr}`);
-  assert.ok(fs.existsSync(path.resolve(tmpDir, 'generated-attempt-0.png')), 'mock generated image should exist');
+  const mockImagePath = path.resolve(tmpDir, 'generated-attempt-0.png');
+  assert.ok(fs.existsSync(mockImagePath), 'mock generated image should exist');
+  const mockSize = fs.statSync(mockImagePath).size;
+  assert.ok(mockSize > 8000, `mock fixture image should be non-trivial (size=${mockSize})`);
   assert.ok(fs.existsSync(path.resolve(tmpDir, 'stage-e-attempt-0.json')), 'stage-e attempt output should exist in mock e2e');
   assert.ok(fs.existsSync(metricsLog), 'metrics log should exist');
 
@@ -109,6 +116,9 @@ function main() {
   assert.strictEqual(dashboard.code, 0, `quality dashboard build should pass: ${dashboard.stdout}\n${dashboard.stderr}`);
   assert.ok(fs.existsSync(dashboardJson), 'dashboard json should exist');
   assert.ok(fs.existsSync(dashboardMd), 'dashboard markdown should exist');
+  const dash = JSON.parse(fs.readFileSync(dashboardJson, 'utf8'));
+  assert.ok(dash && dash.totals && typeof dash.totals.failure_rate === 'number', 'dashboard should include totals.failure_rate');
+  assert.ok(dash && dash.by_preset, 'dashboard should include by_preset stats');
 
   process.stdout.write(JSON.stringify({
     ok: true,

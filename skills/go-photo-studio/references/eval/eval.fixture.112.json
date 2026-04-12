@@ -1,0 +1,1458 @@
+[
+  {
+    "preset_id": "studio-classic",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.902,
+      "embedding_identity_similarity": 0.728,
+      "deterministic_identity_similarity": 0.721,
+      "composition_compliance": 0.845,
+      "realism_score": 0.814,
+      "artifact_risk": 0.164
+    }
+  },
+  {
+    "preset_id": "studio-classic",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.876,
+      "embedding_identity_similarity": 0.758,
+      "deterministic_identity_similarity": 0.704,
+      "composition_compliance": 0.854,
+      "realism_score": 0.793,
+      "artifact_risk": 0.141
+    }
+  },
+  {
+    "preset_id": "studio-classic",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.894,
+      "embedding_identity_similarity": 0.751,
+      "deterministic_identity_similarity": 0.694,
+      "composition_compliance": 0.807,
+      "realism_score": 0.785,
+      "artifact_risk": 0.17
+    }
+  },
+  {
+    "preset_id": "studio-classic",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.894,
+      "embedding_identity_similarity": 0.751,
+      "deterministic_identity_similarity": 0.694,
+      "composition_compliance": 0.807,
+      "realism_score": 0.785,
+      "artifact_risk": 0.17
+    }
+  },
+  {
+    "preset_id": "studio-classic",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.903,
+      "embedding_identity_similarity": 0.734,
+      "deterministic_identity_similarity": 0.671,
+      "composition_compliance": 0.825,
+      "realism_score": 0.8,
+      "artifact_risk": 0.13
+    }
+  },
+  {
+    "preset_id": "studio-classic",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.884,
+      "embedding_identity_similarity": 0.715,
+      "deterministic_identity_similarity": 0.686,
+      "composition_compliance": 0.84,
+      "realism_score": 0.755,
+      "artifact_risk": 0.143
+    }
+  },
+  {
+    "preset_id": "studio-classic",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.726,
+      "embedding_identity_similarity": 0.61,
+      "deterministic_identity_similarity": 0.56,
+      "composition_compliance": 0.64,
+      "realism_score": 0.643,
+      "artifact_risk": 0.429
+    }
+  },
+  {
+    "preset_id": "studio-classic",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.726,
+      "embedding_identity_similarity": 0.61,
+      "deterministic_identity_similarity": 0.56,
+      "composition_compliance": 0.64,
+      "realism_score": 0.643,
+      "artifact_risk": 0.429
+    }
+  },
+  {
+    "preset_id": "tech-founder",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.861,
+      "embedding_identity_similarity": 0.728,
+      "deterministic_identity_similarity": 0.7,
+      "composition_compliance": 0.795,
+      "realism_score": 0.77,
+      "artifact_risk": 0.164
+    }
+  },
+  {
+    "preset_id": "tech-founder",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.876,
+      "embedding_identity_similarity": 0.74,
+      "deterministic_identity_similarity": 0.66,
+      "composition_compliance": 0.81,
+      "realism_score": 0.793,
+      "artifact_risk": 0.209
+    }
+  },
+  {
+    "preset_id": "tech-founder",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.85,
+      "embedding_identity_similarity": 0.716,
+      "deterministic_identity_similarity": 0.694,
+      "composition_compliance": 0.884,
+      "realism_score": 0.82,
+      "artifact_risk": 0.153
+    }
+  },
+  {
+    "preset_id": "tech-founder",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.85,
+      "embedding_identity_similarity": 0.716,
+      "deterministic_identity_similarity": 0.694,
+      "composition_compliance": 0.884,
+      "realism_score": 0.82,
+      "artifact_risk": 0.153
+    }
+  },
+  {
+    "preset_id": "tech-founder",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.863,
+      "embedding_identity_similarity": 0.734,
+      "deterministic_identity_similarity": 0.739,
+      "composition_compliance": 0.86,
+      "realism_score": 0.781,
+      "artifact_risk": 0.163
+    }
+  },
+  {
+    "preset_id": "tech-founder",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.884,
+      "embedding_identity_similarity": 0.774,
+      "deterministic_identity_similarity": 0.718,
+      "composition_compliance": 0.821,
+      "realism_score": 0.793,
+      "artifact_risk": 0.146
+    }
+  },
+  {
+    "preset_id": "tech-founder",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.758,
+      "embedding_identity_similarity": 0.595,
+      "deterministic_identity_similarity": 0.593,
+      "composition_compliance": 0.643,
+      "realism_score": 0.657,
+      "artifact_risk": 0.429
+    }
+  },
+  {
+    "preset_id": "tech-founder",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.758,
+      "embedding_identity_similarity": 0.595,
+      "deterministic_identity_similarity": 0.593,
+      "composition_compliance": 0.643,
+      "realism_score": 0.657,
+      "artifact_risk": 0.429
+    }
+  },
+  {
+    "preset_id": "elite-leadership",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.929,
+      "embedding_identity_similarity": 0.769,
+      "deterministic_identity_similarity": 0.698,
+      "composition_compliance": 0.864,
+      "realism_score": 0.809,
+      "artifact_risk": 0.205
+    }
+  },
+  {
+    "preset_id": "elite-leadership",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.924,
+      "embedding_identity_similarity": 0.738,
+      "deterministic_identity_similarity": 0.721,
+      "composition_compliance": 0.849,
+      "realism_score": 0.839,
+      "artifact_risk": 0.166
+    }
+  },
+  {
+    "preset_id": "elite-leadership",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.911,
+      "embedding_identity_similarity": 0.747,
+      "deterministic_identity_similarity": 0.735,
+      "composition_compliance": 0.836,
+      "realism_score": 0.774,
+      "artifact_risk": 0.186
+    }
+  },
+  {
+    "preset_id": "elite-leadership",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.911,
+      "embedding_identity_similarity": 0.747,
+      "deterministic_identity_similarity": 0.735,
+      "composition_compliance": 0.836,
+      "realism_score": 0.774,
+      "artifact_risk": 0.186
+    }
+  },
+  {
+    "preset_id": "elite-leadership",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.898,
+      "embedding_identity_similarity": 0.77,
+      "deterministic_identity_similarity": 0.696,
+      "composition_compliance": 0.814,
+      "realism_score": 0.818,
+      "artifact_risk": 0.194
+    }
+  },
+  {
+    "preset_id": "elite-leadership",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.925,
+      "embedding_identity_similarity": 0.737,
+      "deterministic_identity_similarity": 0.677,
+      "composition_compliance": 0.858,
+      "realism_score": 0.827,
+      "artifact_risk": 0.153
+    }
+  },
+  {
+    "preset_id": "elite-leadership",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.717,
+      "embedding_identity_similarity": 0.624,
+      "deterministic_identity_similarity": 0.624,
+      "composition_compliance": 0.65,
+      "realism_score": 0.651,
+      "artifact_risk": 0.361
+    }
+  },
+  {
+    "preset_id": "elite-leadership",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.717,
+      "embedding_identity_similarity": 0.624,
+      "deterministic_identity_similarity": 0.624,
+      "composition_compliance": 0.65,
+      "realism_score": 0.651,
+      "artifact_risk": 0.361
+    }
+  },
+  {
+    "preset_id": "creative-studio",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.867,
+      "embedding_identity_similarity": 0.754,
+      "deterministic_identity_similarity": 0.724,
+      "composition_compliance": 0.82,
+      "realism_score": 0.801,
+      "artifact_risk": 0.141
+    }
+  },
+  {
+    "preset_id": "creative-studio",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.906,
+      "embedding_identity_similarity": 0.761,
+      "deterministic_identity_similarity": 0.683,
+      "composition_compliance": 0.841,
+      "realism_score": 0.768,
+      "artifact_risk": 0.139
+    }
+  },
+  {
+    "preset_id": "creative-studio",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.873,
+      "embedding_identity_similarity": 0.741,
+      "deterministic_identity_similarity": 0.671,
+      "composition_compliance": 0.805,
+      "realism_score": 0.782,
+      "artifact_risk": 0.139
+    }
+  },
+  {
+    "preset_id": "creative-studio",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.873,
+      "embedding_identity_similarity": 0.741,
+      "deterministic_identity_similarity": 0.671,
+      "composition_compliance": 0.805,
+      "realism_score": 0.782,
+      "artifact_risk": 0.139
+    }
+  },
+  {
+    "preset_id": "creative-studio",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.891,
+      "embedding_identity_similarity": 0.715,
+      "deterministic_identity_similarity": 0.669,
+      "composition_compliance": 0.822,
+      "realism_score": 0.765,
+      "artifact_risk": 0.195
+    }
+  },
+  {
+    "preset_id": "creative-studio",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.861,
+      "embedding_identity_similarity": 0.713,
+      "deterministic_identity_similarity": 0.684,
+      "composition_compliance": 0.805,
+      "realism_score": 0.828,
+      "artifact_risk": 0.174
+    }
+  },
+  {
+    "preset_id": "creative-studio",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.724,
+      "embedding_identity_similarity": 0.583,
+      "deterministic_identity_similarity": 0.625,
+      "composition_compliance": 0.675,
+      "realism_score": 0.641,
+      "artifact_risk": 0.42
+    }
+  },
+  {
+    "preset_id": "creative-studio",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.724,
+      "embedding_identity_similarity": 0.583,
+      "deterministic_identity_similarity": 0.625,
+      "composition_compliance": 0.675,
+      "realism_score": 0.641,
+      "artifact_risk": 0.42
+    }
+  },
+  {
+    "preset_id": "medical-professional",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.888,
+      "embedding_identity_similarity": 0.721,
+      "deterministic_identity_similarity": 0.685,
+      "composition_compliance": 0.811,
+      "realism_score": 0.77,
+      "artifact_risk": 0.137
+    }
+  },
+  {
+    "preset_id": "medical-professional",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.868,
+      "embedding_identity_similarity": 0.727,
+      "deterministic_identity_similarity": 0.674,
+      "composition_compliance": 0.81,
+      "realism_score": 0.762,
+      "artifact_risk": 0.195
+    }
+  },
+  {
+    "preset_id": "medical-professional",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.864,
+      "embedding_identity_similarity": 0.717,
+      "deterministic_identity_similarity": 0.667,
+      "composition_compliance": 0.868,
+      "realism_score": 0.757,
+      "artifact_risk": 0.137
+    }
+  },
+  {
+    "preset_id": "medical-professional",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.864,
+      "embedding_identity_similarity": 0.717,
+      "deterministic_identity_similarity": 0.667,
+      "composition_compliance": 0.868,
+      "realism_score": 0.757,
+      "artifact_risk": 0.137
+    }
+  },
+  {
+    "preset_id": "medical-professional",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.864,
+      "embedding_identity_similarity": 0.711,
+      "deterministic_identity_similarity": 0.725,
+      "composition_compliance": 0.797,
+      "realism_score": 0.763,
+      "artifact_risk": 0.136
+    }
+  },
+  {
+    "preset_id": "medical-professional",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.857,
+      "embedding_identity_similarity": 0.762,
+      "deterministic_identity_similarity": 0.661,
+      "composition_compliance": 0.803,
+      "realism_score": 0.762,
+      "artifact_risk": 0.178
+    }
+  },
+  {
+    "preset_id": "medical-professional",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.701,
+      "embedding_identity_similarity": 0.581,
+      "deterministic_identity_similarity": 0.566,
+      "composition_compliance": 0.679,
+      "realism_score": 0.627,
+      "artifact_risk": 0.381
+    }
+  },
+  {
+    "preset_id": "medical-professional",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.701,
+      "embedding_identity_similarity": 0.581,
+      "deterministic_identity_similarity": 0.566,
+      "composition_compliance": 0.679,
+      "realism_score": 0.627,
+      "artifact_risk": 0.381
+    }
+  },
+  {
+    "preset_id": "academic-scholar",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.864,
+      "embedding_identity_similarity": 0.711,
+      "deterministic_identity_similarity": 0.725,
+      "composition_compliance": 0.797,
+      "realism_score": 0.763,
+      "artifact_risk": 0.136
+    }
+  },
+  {
+    "preset_id": "academic-scholar",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.857,
+      "embedding_identity_similarity": 0.762,
+      "deterministic_identity_similarity": 0.661,
+      "composition_compliance": 0.803,
+      "realism_score": 0.762,
+      "artifact_risk": 0.178
+    }
+  },
+  {
+    "preset_id": "academic-scholar",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.851,
+      "embedding_identity_similarity": 0.711,
+      "deterministic_identity_similarity": 0.666,
+      "composition_compliance": 0.849,
+      "realism_score": 0.777,
+      "artifact_risk": 0.161
+    }
+  },
+  {
+    "preset_id": "academic-scholar",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.851,
+      "embedding_identity_similarity": 0.711,
+      "deterministic_identity_similarity": 0.666,
+      "composition_compliance": 0.849,
+      "realism_score": 0.777,
+      "artifact_risk": 0.161
+    }
+  },
+  {
+    "preset_id": "academic-scholar",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.857,
+      "embedding_identity_similarity": 0.71,
+      "deterministic_identity_similarity": 0.708,
+      "composition_compliance": 0.817,
+      "realism_score": 0.79,
+      "artifact_risk": 0.156
+    }
+  },
+  {
+    "preset_id": "academic-scholar",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.856,
+      "embedding_identity_similarity": 0.747,
+      "deterministic_identity_similarity": 0.679,
+      "composition_compliance": 0.83,
+      "realism_score": 0.785,
+      "artifact_risk": 0.159
+    }
+  },
+  {
+    "preset_id": "academic-scholar",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.719,
+      "embedding_identity_similarity": 0.602,
+      "deterministic_identity_similarity": 0.586,
+      "composition_compliance": 0.658,
+      "realism_score": 0.651,
+      "artifact_risk": 0.364
+    }
+  },
+  {
+    "preset_id": "academic-scholar",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.719,
+      "embedding_identity_similarity": 0.602,
+      "deterministic_identity_similarity": 0.586,
+      "composition_compliance": 0.658,
+      "realism_score": 0.651,
+      "artifact_risk": 0.364
+    }
+  },
+  {
+    "preset_id": "resume-modern",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.856,
+      "embedding_identity_similarity": 0.747,
+      "deterministic_identity_similarity": 0.679,
+      "composition_compliance": 0.83,
+      "realism_score": 0.785,
+      "artifact_risk": 0.159
+    }
+  },
+  {
+    "preset_id": "resume-modern",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.898,
+      "embedding_identity_similarity": 0.722,
+      "deterministic_identity_similarity": 0.691,
+      "composition_compliance": 0.825,
+      "realism_score": 0.788,
+      "artifact_risk": 0.171
+    }
+  },
+  {
+    "preset_id": "resume-modern",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.881,
+      "embedding_identity_similarity": 0.728,
+      "deterministic_identity_similarity": 0.689,
+      "composition_compliance": 0.841,
+      "realism_score": 0.771,
+      "artifact_risk": 0.132
+    }
+  },
+  {
+    "preset_id": "resume-modern",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.881,
+      "embedding_identity_similarity": 0.728,
+      "deterministic_identity_similarity": 0.689,
+      "composition_compliance": 0.841,
+      "realism_score": 0.771,
+      "artifact_risk": 0.132
+    }
+  },
+  {
+    "preset_id": "resume-modern",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.876,
+      "embedding_identity_similarity": 0.731,
+      "deterministic_identity_similarity": 0.701,
+      "composition_compliance": 0.811,
+      "realism_score": 0.758,
+      "artifact_risk": 0.145
+    }
+  },
+  {
+    "preset_id": "resume-modern",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.879,
+      "embedding_identity_similarity": 0.741,
+      "deterministic_identity_similarity": 0.674,
+      "composition_compliance": 0.798,
+      "realism_score": 0.772,
+      "artifact_risk": 0.178
+    }
+  },
+  {
+    "preset_id": "resume-modern",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.714,
+      "embedding_identity_similarity": 0.577,
+      "deterministic_identity_similarity": 0.575,
+      "composition_compliance": 0.679,
+      "realism_score": 0.619,
+      "artifact_risk": 0.405
+    }
+  },
+  {
+    "preset_id": "resume-modern",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.714,
+      "embedding_identity_similarity": 0.577,
+      "deterministic_identity_similarity": 0.575,
+      "composition_compliance": 0.679,
+      "realism_score": 0.619,
+      "artifact_risk": 0.405
+    }
+  },
+  {
+    "preset_id": "resume-premium",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.865,
+      "embedding_identity_similarity": 0.747,
+      "deterministic_identity_similarity": 0.672,
+      "composition_compliance": 0.857,
+      "realism_score": 0.772,
+      "artifact_risk": 0.134
+    }
+  },
+  {
+    "preset_id": "resume-premium",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.898,
+      "embedding_identity_similarity": 0.716,
+      "deterministic_identity_similarity": 0.715,
+      "composition_compliance": 0.812,
+      "realism_score": 0.759,
+      "artifact_risk": 0.189
+    }
+  },
+  {
+    "preset_id": "resume-premium",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.905,
+      "embedding_identity_similarity": 0.718,
+      "deterministic_identity_similarity": 0.664,
+      "composition_compliance": 0.861,
+      "realism_score": 0.794,
+      "artifact_risk": 0.137
+    }
+  },
+  {
+    "preset_id": "resume-premium",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.905,
+      "embedding_identity_similarity": 0.718,
+      "deterministic_identity_similarity": 0.664,
+      "composition_compliance": 0.861,
+      "realism_score": 0.794,
+      "artifact_risk": 0.137
+    }
+  },
+  {
+    "preset_id": "resume-premium",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.865,
+      "embedding_identity_similarity": 0.708,
+      "deterministic_identity_similarity": 0.719,
+      "composition_compliance": 0.834,
+      "realism_score": 0.763,
+      "artifact_risk": 0.152
+    }
+  },
+  {
+    "preset_id": "resume-premium",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.854,
+      "embedding_identity_similarity": 0.756,
+      "deterministic_identity_similarity": 0.695,
+      "composition_compliance": 0.803,
+      "realism_score": 0.78,
+      "artifact_risk": 0.138
+    }
+  },
+  {
+    "preset_id": "resume-premium",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.735,
+      "embedding_identity_similarity": 0.581,
+      "deterministic_identity_similarity": 0.582,
+      "composition_compliance": 0.633,
+      "realism_score": 0.639,
+      "artifact_risk": 0.389
+    }
+  },
+  {
+    "preset_id": "resume-premium",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.735,
+      "embedding_identity_similarity": 0.581,
+      "deterministic_identity_similarity": 0.582,
+      "composition_compliance": 0.633,
+      "realism_score": 0.639,
+      "artifact_risk": 0.389
+    }
+  },
+  {
+    "preset_id": "resume-creative",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.872,
+      "embedding_identity_similarity": 0.712,
+      "deterministic_identity_similarity": 0.69,
+      "composition_compliance": 0.839,
+      "realism_score": 0.787,
+      "artifact_risk": 0.166
+    }
+  },
+  {
+    "preset_id": "resume-creative",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.858,
+      "embedding_identity_similarity": 0.731,
+      "deterministic_identity_similarity": 0.699,
+      "composition_compliance": 0.827,
+      "realism_score": 0.795,
+      "artifact_risk": 0.204
+    }
+  },
+  {
+    "preset_id": "resume-creative",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.889,
+      "embedding_identity_similarity": 0.73,
+      "deterministic_identity_similarity": 0.696,
+      "composition_compliance": 0.879,
+      "realism_score": 0.828,
+      "artifact_risk": 0.141
+    }
+  },
+  {
+    "preset_id": "resume-creative",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.889,
+      "embedding_identity_similarity": 0.73,
+      "deterministic_identity_similarity": 0.696,
+      "composition_compliance": 0.879,
+      "realism_score": 0.828,
+      "artifact_risk": 0.141
+    }
+  },
+  {
+    "preset_id": "resume-creative",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.879,
+      "embedding_identity_similarity": 0.736,
+      "deterministic_identity_similarity": 0.734,
+      "composition_compliance": 0.868,
+      "realism_score": 0.768,
+      "artifact_risk": 0.172
+    }
+  },
+  {
+    "preset_id": "resume-creative",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.886,
+      "embedding_identity_similarity": 0.77,
+      "deterministic_identity_similarity": 0.725,
+      "composition_compliance": 0.808,
+      "realism_score": 0.803,
+      "artifact_risk": 0.189
+    }
+  },
+  {
+    "preset_id": "resume-creative",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.765,
+      "embedding_identity_similarity": 0.585,
+      "deterministic_identity_similarity": 0.602,
+      "composition_compliance": 0.691,
+      "realism_score": 0.675,
+      "artifact_risk": 0.41
+    }
+  },
+  {
+    "preset_id": "resume-creative",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.765,
+      "embedding_identity_similarity": 0.585,
+      "deterministic_identity_similarity": 0.602,
+      "composition_compliance": 0.691,
+      "realism_score": 0.675,
+      "artifact_risk": 0.41
+    }
+  },
+  {
+    "preset_id": "id-standard",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.879,
+      "embedding_identity_similarity": 0.736,
+      "deterministic_identity_similarity": 0.734,
+      "composition_compliance": 0.868,
+      "realism_score": 0.768,
+      "artifact_risk": 0.172
+    }
+  },
+  {
+    "preset_id": "id-standard",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.886,
+      "embedding_identity_similarity": 0.77,
+      "deterministic_identity_similarity": 0.725,
+      "composition_compliance": 0.808,
+      "realism_score": 0.803,
+      "artifact_risk": 0.189
+    }
+  },
+  {
+    "preset_id": "id-standard",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.915,
+      "embedding_identity_similarity": 0.715,
+      "deterministic_identity_similarity": 0.702,
+      "composition_compliance": 0.861,
+      "realism_score": 0.825,
+      "artifact_risk": 0.19
+    }
+  },
+  {
+    "preset_id": "id-standard",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.915,
+      "embedding_identity_similarity": 0.715,
+      "deterministic_identity_similarity": 0.702,
+      "composition_compliance": 0.861,
+      "realism_score": 0.825,
+      "artifact_risk": 0.19
+    }
+  },
+  {
+    "preset_id": "id-standard",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.861,
+      "embedding_identity_similarity": 0.742,
+      "deterministic_identity_similarity": 0.719,
+      "composition_compliance": 0.865,
+      "realism_score": 0.823,
+      "artifact_risk": 0.204
+    }
+  },
+  {
+    "preset_id": "id-standard",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.892,
+      "embedding_identity_similarity": 0.757,
+      "deterministic_identity_similarity": 0.722,
+      "composition_compliance": 0.863,
+      "realism_score": 0.839,
+      "artifact_risk": 0.142
+    }
+  },
+  {
+    "preset_id": "id-standard",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.762,
+      "embedding_identity_similarity": 0.628,
+      "deterministic_identity_similarity": 0.634,
+      "composition_compliance": 0.638,
+      "realism_score": 0.61,
+      "artifact_risk": 0.389
+    }
+  },
+  {
+    "preset_id": "id-standard",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.762,
+      "embedding_identity_similarity": 0.628,
+      "deterministic_identity_similarity": 0.634,
+      "composition_compliance": 0.638,
+      "realism_score": 0.61,
+      "artifact_risk": 0.389
+    }
+  },
+  {
+    "preset_id": "id-schengen",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.91,
+      "embedding_identity_similarity": 0.77,
+      "deterministic_identity_similarity": 0.672,
+      "composition_compliance": 0.8,
+      "realism_score": 0.799,
+      "artifact_risk": 0.151
+    }
+  },
+  {
+    "preset_id": "id-schengen",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.924,
+      "embedding_identity_similarity": 0.715,
+      "deterministic_identity_similarity": 0.664,
+      "composition_compliance": 0.839,
+      "realism_score": 0.779,
+      "artifact_risk": 0.205
+    }
+  },
+  {
+    "preset_id": "id-schengen",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.854,
+      "embedding_identity_similarity": 0.739,
+      "deterministic_identity_similarity": 0.681,
+      "composition_compliance": 0.879,
+      "realism_score": 0.762,
+      "artifact_risk": 0.143
+    }
+  },
+  {
+    "preset_id": "id-schengen",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.854,
+      "embedding_identity_similarity": 0.739,
+      "deterministic_identity_similarity": 0.681,
+      "composition_compliance": 0.879,
+      "realism_score": 0.762,
+      "artifact_risk": 0.143
+    }
+  },
+  {
+    "preset_id": "id-schengen",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.889,
+      "embedding_identity_similarity": 0.723,
+      "deterministic_identity_similarity": 0.735,
+      "composition_compliance": 0.802,
+      "realism_score": 0.77,
+      "artifact_risk": 0.17
+    }
+  },
+  {
+    "preset_id": "id-schengen",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.871,
+      "embedding_identity_similarity": 0.77,
+      "deterministic_identity_similarity": 0.666,
+      "composition_compliance": 0.81,
+      "realism_score": 0.8,
+      "artifact_risk": 0.201
+    }
+  },
+  {
+    "preset_id": "id-schengen",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.706,
+      "embedding_identity_similarity": 0.587,
+      "deterministic_identity_similarity": 0.6,
+      "composition_compliance": 0.705,
+      "realism_score": 0.636,
+      "artifact_risk": 0.396
+    }
+  },
+  {
+    "preset_id": "id-schengen",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.706,
+      "embedding_identity_similarity": 0.587,
+      "deterministic_identity_similarity": 0.6,
+      "composition_compliance": 0.705,
+      "realism_score": 0.636,
+      "artifact_risk": 0.396
+    }
+  },
+  {
+    "preset_id": "id-blue-premium",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.896,
+      "embedding_identity_similarity": 0.755,
+      "deterministic_identity_similarity": 0.736,
+      "composition_compliance": 0.814,
+      "realism_score": 0.813,
+      "artifact_risk": 0.134
+    }
+  },
+  {
+    "preset_id": "id-blue-premium",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.907,
+      "embedding_identity_similarity": 0.771,
+      "deterministic_identity_similarity": 0.677,
+      "composition_compliance": 0.853,
+      "realism_score": 0.759,
+      "artifact_risk": 0.133
+    }
+  },
+  {
+    "preset_id": "id-blue-premium",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.867,
+      "embedding_identity_similarity": 0.75,
+      "deterministic_identity_similarity": 0.664,
+      "composition_compliance": 0.798,
+      "realism_score": 0.8,
+      "artifact_risk": 0.167
+    }
+  },
+  {
+    "preset_id": "id-blue-premium",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.867,
+      "embedding_identity_similarity": 0.75,
+      "deterministic_identity_similarity": 0.664,
+      "composition_compliance": 0.798,
+      "realism_score": 0.8,
+      "artifact_risk": 0.167
+    }
+  },
+  {
+    "preset_id": "id-blue-premium",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.901,
+      "embedding_identity_similarity": 0.708,
+      "deterministic_identity_similarity": 0.663,
+      "composition_compliance": 0.84,
+      "realism_score": 0.796,
+      "artifact_risk": 0.167
+    }
+  },
+  {
+    "preset_id": "id-blue-premium",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.854,
+      "embedding_identity_similarity": 0.707,
+      "deterministic_identity_similarity": 0.7,
+      "composition_compliance": 0.836,
+      "realism_score": 0.797,
+      "artifact_risk": 0.203
+    }
+  },
+  {
+    "preset_id": "id-blue-premium",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.74,
+      "embedding_identity_similarity": 0.607,
+      "deterministic_identity_similarity": 0.597,
+      "composition_compliance": 0.707,
+      "realism_score": 0.641,
+      "artifact_risk": 0.43
+    }
+  },
+  {
+    "preset_id": "id-blue-premium",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.74,
+      "embedding_identity_similarity": 0.607,
+      "deterministic_identity_similarity": 0.597,
+      "composition_compliance": 0.707,
+      "realism_score": 0.641,
+      "artifact_risk": 0.43
+    }
+  },
+  {
+    "preset_id": "casual-outdoor",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.89,
+      "embedding_identity_similarity": 0.737,
+      "deterministic_identity_similarity": 0.697,
+      "composition_compliance": 0.877,
+      "realism_score": 0.791,
+      "artifact_risk": 0.21
+    }
+  },
+  {
+    "preset_id": "casual-outdoor",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.887,
+      "embedding_identity_similarity": 0.738,
+      "deterministic_identity_similarity": 0.733,
+      "composition_compliance": 0.831,
+      "realism_score": 0.845,
+      "artifact_risk": 0.151
+    }
+  },
+  {
+    "preset_id": "casual-outdoor",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.923,
+      "embedding_identity_similarity": 0.733,
+      "deterministic_identity_similarity": 0.74,
+      "composition_compliance": 0.819,
+      "realism_score": 0.824,
+      "artifact_risk": 0.208
+    }
+  },
+  {
+    "preset_id": "casual-outdoor",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.923,
+      "embedding_identity_similarity": 0.733,
+      "deterministic_identity_similarity": 0.74,
+      "composition_compliance": 0.819,
+      "realism_score": 0.824,
+      "artifact_risk": 0.208
+    }
+  },
+  {
+    "preset_id": "casual-outdoor",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.882,
+      "embedding_identity_similarity": 0.775,
+      "deterministic_identity_similarity": 0.681,
+      "composition_compliance": 0.864,
+      "realism_score": 0.843,
+      "artifact_risk": 0.139
+    }
+  },
+  {
+    "preset_id": "casual-outdoor",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.93,
+      "embedding_identity_similarity": 0.724,
+      "deterministic_identity_similarity": 0.721,
+      "composition_compliance": 0.883,
+      "realism_score": 0.765,
+      "artifact_risk": 0.13
+    }
+  },
+  {
+    "preset_id": "casual-outdoor",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.761,
+      "embedding_identity_similarity": 0.643,
+      "deterministic_identity_similarity": 0.569,
+      "composition_compliance": 0.625,
+      "realism_score": 0.671,
+      "artifact_risk": 0.374
+    }
+  },
+  {
+    "preset_id": "casual-outdoor",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.761,
+      "embedding_identity_similarity": 0.643,
+      "deterministic_identity_similarity": 0.569,
+      "composition_compliance": 0.625,
+      "realism_score": 0.671,
+      "artifact_risk": 0.374
+    }
+  },
+  {
+    "preset_id": "casual-cafe",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.93,
+      "embedding_identity_similarity": 0.724,
+      "deterministic_identity_similarity": 0.721,
+      "composition_compliance": 0.883,
+      "realism_score": 0.765,
+      "artifact_risk": 0.13
+    }
+  },
+  {
+    "preset_id": "casual-cafe",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.871,
+      "embedding_identity_similarity": 0.758,
+      "deterministic_identity_similarity": 0.738,
+      "composition_compliance": 0.805,
+      "realism_score": 0.755,
+      "artifact_risk": 0.189
+    }
+  },
+  {
+    "preset_id": "casual-cafe",
+    "ratio": "9:16",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.928,
+      "embedding_identity_similarity": 0.712,
+      "deterministic_identity_similarity": 0.66,
+      "composition_compliance": 0.861,
+      "realism_score": 0.783,
+      "artifact_risk": 0.147
+    }
+  },
+  {
+    "preset_id": "casual-cafe",
+    "ratio": "2:2",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.928,
+      "embedding_identity_similarity": 0.712,
+      "deterministic_identity_similarity": 0.66,
+      "composition_compliance": 0.861,
+      "realism_score": 0.783,
+      "artifact_risk": 0.147
+    }
+  },
+  {
+    "preset_id": "casual-cafe",
+    "ratio": "4:5",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.859,
+      "embedding_identity_similarity": 0.705,
+      "deterministic_identity_similarity": 0.719,
+      "composition_compliance": 0.823,
+      "realism_score": 0.774,
+      "artifact_risk": 0.205
+    }
+  },
+  {
+    "preset_id": "casual-cafe",
+    "ratio": "1:1",
+    "label_pass": true,
+    "metrics": {
+      "identity_similarity": 0.85,
+      "embedding_identity_similarity": 0.756,
+      "deterministic_identity_similarity": 0.684,
+      "composition_compliance": 0.814,
+      "realism_score": 0.839,
+      "artifact_risk": 0.152
+    }
+  },
+  {
+    "preset_id": "casual-cafe",
+    "ratio": "9:16",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.724,
+      "embedding_identity_similarity": 0.59,
+      "deterministic_identity_similarity": 0.635,
+      "composition_compliance": 0.649,
+      "realism_score": 0.644,
+      "artifact_risk": 0.415
+    }
+  },
+  {
+    "preset_id": "casual-cafe",
+    "ratio": "2:2",
+    "label_pass": false,
+    "metrics": {
+      "identity_similarity": 0.724,
+      "embedding_identity_similarity": 0.59,
+      "deterministic_identity_similarity": 0.635,
+      "composition_compliance": 0.649,
+      "realism_score": 0.644,
+      "artifact_risk": 0.415
+    }
+  }
+]

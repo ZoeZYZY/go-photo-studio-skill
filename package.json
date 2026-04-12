@@ -15,7 +15,9 @@
     "skill:e2e:mock": "node skills/go-photo-studio/scripts/run-pipeline.cjs --request skills/go-photo-studio/examples/requests/e2e-mock.en.json --provider gemini --outdir .pipeline-out --max-retries 0 --generate-cmd \"node skills/go-photo-studio/scripts/mock-generate.cjs --output \\\"{output}\\\"\"",
     "skill:e2e:online:gemini": "node skills/go-photo-studio/scripts/run-pipeline.cjs --request skills/go-photo-studio/examples/requests/e2e-online.template.json --provider gemini --outdir .pipeline-out --max-retries 0 --generate-cmd \"node skills/go-photo-studio/scripts/generate-with-provider.cjs --request {request} --stage-c {stage_c} --stage-d {stage_d} --provider gemini --output \\\"{output}\\\"\"",
     "skill:e2e:online:openai": "node skills/go-photo-studio/scripts/run-pipeline.cjs --request skills/go-photo-studio/examples/requests/e2e-online.template.json --provider openai --outdir .pipeline-out --max-retries 0 --generate-cmd \"node skills/go-photo-studio/scripts/generate-with-provider.cjs --request {request} --stage-c {stage_c} --stage-d {stage_d} --provider openai --output \\\"{output}\\\"\"",
+    "skill:eval:fixture": "node skills/go-photo-studio/scripts/generate-eval-fixture.cjs --presets skills/go-photo-studio/references/presets.json --output skills/go-photo-studio/references/eval/eval.fixture.112.json --per-preset 8",
     "skill:calibrate": "node skills/go-photo-studio/scripts/calibrate-thresholds.cjs --input skills/go-photo-studio/references/eval/eval.json --output skills/go-photo-studio/references/verification-thresholds.json",
+    "skill:calibrate:fixture": "node skills/go-photo-studio/scripts/calibrate-thresholds.cjs --input skills/go-photo-studio/references/eval/eval.fixture.112.json --output skills/go-photo-studio/references/verification-thresholds.fixture.json",
     "skill:dashboard": "node skills/go-photo-studio/scripts/build-quality-dashboard.cjs",
     "skill:test": "node skills/go-photo-studio/tests/smoke.cjs"
   },

@@ -55,17 +55,18 @@ function resolveProviderApiKey(provider) {
   return process.env.GEMINI_API_KEY || '';
 }
 
-function loadThresholds(filePath, ratio) {
+function loadThresholds(filePath, ratio, presetId) {
   const cfg = readJson(path.resolve(filePath));
   const global = cfg.default || {};
   const ratioProfile = cfg.by_ratio?.[ratio] || {};
+  const presetProfile = cfg.by_preset?.[presetId] || {};
   return {
-    identity_similarity: ratioProfile.identity_similarity ?? global.identity_similarity ?? 0.82,
-    embedding_identity_similarity: ratioProfile.embedding_identity_similarity ?? global.embedding_identity_similarity ?? 0.68,
-    deterministic_identity_similarity: ratioProfile.deterministic_identity_similarity ?? global.deterministic_identity_similarity ?? 0.66,
-    composition_compliance: ratioProfile.composition_compliance ?? global.composition_compliance ?? 0.75,
-    realism_score: ratioProfile.realism_score ?? global.realism_score ?? 0.72,
-    artifact_risk_max: ratioProfile.artifact_risk_max ?? global.artifact_risk_max ?? 0.35,
+    identity_similarity: presetProfile.identity_similarity ?? ratioProfile.identity_similarity ?? global.identity_similarity ?? 0.82,
+    embedding_identity_similarity: presetProfile.embedding_identity_similarity ?? ratioProfile.embedding_identity_similarity ?? global.embedding_identity_similarity ?? 0.68,
+    deterministic_identity_similarity: presetProfile.deterministic_identity_similarity ?? ratioProfile.deterministic_identity_similarity ?? global.deterministic_identity_similarity ?? 0.66,
+    composition_compliance: presetProfile.composition_compliance ?? ratioProfile.composition_compliance ?? global.composition_compliance ?? 0.75,
+    realism_score: presetProfile.realism_score ?? ratioProfile.realism_score ?? global.realism_score ?? 0.72,
+    artifact_risk_max: presetProfile.artifact_risk_max ?? ratioProfile.artifact_risk_max ?? global.artifact_risk_max ?? 0.35,
   };
 }
 
@@ -122,7 +123,7 @@ async function main() {
     const args = parseArgs(process.argv.slice(2));
     const request = readJson(path.resolve(args.request));
     const apiKey = resolveProviderApiKey(args.provider);
-    const thresholds = loadThresholds(args.thresholds, request.output_ratio);
+    const thresholds = loadThresholds(args.thresholds, request.output_ratio, request.preset_id);
 
     if (!apiKey) {
       process.stdout.write(JSON.stringify(fallback(`missing_${args.provider}_api_key`), null, 2) + '\n');

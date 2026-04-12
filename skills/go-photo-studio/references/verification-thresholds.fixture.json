@@ -1,0 +1,162 @@
+{
+  "default": {
+    "identity_similarity": 0.861,
+    "embedding_identity_similarity": 0.715,
+    "deterministic_identity_similarity": 0.669,
+    "composition_compliance": 0.807,
+    "realism_score": 0.765,
+    "artifact_risk_max": 0.189
+  },
+  "by_ratio": {
+    "4:5": {
+      "identity_similarity": 0.863,
+      "embedding_identity_similarity": 0.711,
+      "deterministic_identity_similarity": 0.679,
+      "composition_compliance": 0.811,
+      "realism_score": 0.765,
+      "artifact_risk_max": 0.172
+    },
+    "1:1": {
+      "identity_similarity": 0.857,
+      "embedding_identity_similarity": 0.722,
+      "deterministic_identity_similarity": 0.674,
+      "composition_compliance": 0.805,
+      "realism_score": 0.762,
+      "artifact_risk_max": 0.189
+    },
+    "9:16": {
+      "identity_similarity": 0.854,
+      "embedding_identity_similarity": 0.715,
+      "deterministic_identity_similarity": 0.664,
+      "composition_compliance": 0.807,
+      "realism_score": 0.771,
+      "artifact_risk_max": 0.17
+    },
+    "2:2": {
+      "identity_similarity": 0.854,
+      "embedding_identity_similarity": 0.715,
+      "deterministic_identity_similarity": 0.664,
+      "composition_compliance": 0.807,
+      "realism_score": 0.771,
+      "artifact_risk_max": 0.17
+    }
+  },
+  "by_preset": {
+    "studio-classic": {
+      "identity_similarity": 0.884,
+      "embedding_identity_similarity": 0.728,
+      "deterministic_identity_similarity": 0.686,
+      "composition_compliance": 0.807,
+      "realism_score": 0.785,
+      "artifact_risk_max": 0.17
+    },
+    "tech-founder": {
+      "identity_similarity": 0.85,
+      "embedding_identity_similarity": 0.716,
+      "deterministic_identity_similarity": 0.694,
+      "composition_compliance": 0.81,
+      "realism_score": 0.781,
+      "artifact_risk_max": 0.164
+    },
+    "elite-leadership": {
+      "identity_similarity": 0.911,
+      "embedding_identity_similarity": 0.738,
+      "deterministic_identity_similarity": 0.696,
+      "composition_compliance": 0.836,
+      "realism_score": 0.774,
+      "artifact_risk_max": 0.194
+    },
+    "creative-studio": {
+      "identity_similarity": 0.867,
+      "embedding_identity_similarity": 0.715,
+      "deterministic_identity_similarity": 0.671,
+      "composition_compliance": 0.805,
+      "realism_score": 0.768,
+      "artifact_risk_max": 0.174
+    },
+    "medical-professional": {
+      "identity_similarity": 0.864,
+      "embedding_identity_similarity": 0.717,
+      "deterministic_identity_similarity": 0.667,
+      "composition_compliance": 0.803,
+      "realism_score": 0.757,
+      "artifact_risk_max": 0.178
+    },
+    "academic-scholar": {
+      "identity_similarity": 0.851,
+      "embedding_identity_similarity": 0.711,
+      "deterministic_identity_similarity": 0.666,
+      "composition_compliance": 0.803,
+      "realism_score": 0.763,
+      "artifact_risk_max": 0.161
+    },
+    "resume-modern": {
+      "identity_similarity": 0.876,
+      "embedding_identity_similarity": 0.728,
+      "deterministic_identity_similarity": 0.679,
+      "composition_compliance": 0.811,
+      "realism_score": 0.771,
+      "artifact_risk_max": 0.171
+    },
+    "resume-premium": {
+      "identity_similarity": 0.865,
+      "embedding_identity_similarity": 0.716,
+      "deterministic_identity_similarity": 0.664,
+      "composition_compliance": 0.812,
+      "realism_score": 0.763,
+      "artifact_risk_max": 0.152
+    },
+    "resume-creative": {
+      "identity_similarity": 0.872,
+      "embedding_identity_similarity": 0.73,
+      "deterministic_identity_similarity": 0.696,
+      "composition_compliance": 0.827,
+      "realism_score": 0.787,
+      "artifact_risk_max": 0.189
+    },
+    "id-standard": {
+      "identity_similarity": 0.879,
+      "embedding_identity_similarity": 0.715,
+      "deterministic_identity_similarity": 0.702,
+      "composition_compliance": 0.861,
+      "realism_score": 0.803,
+      "artifact_risk_max": 0.19
+    },
+    "id-schengen": {
+      "identity_similarity": 0.854,
+      "embedding_identity_similarity": 0.723,
+      "deterministic_identity_similarity": 0.666,
+      "composition_compliance": 0.802,
+      "realism_score": 0.762,
+      "artifact_risk_max": 0.201
+    },
+    "id-blue-premium": {
+      "identity_similarity": 0.867,
+      "embedding_identity_similarity": 0.708,
+      "deterministic_identity_similarity": 0.664,
+      "composition_compliance": 0.798,
+      "realism_score": 0.796,
+      "artifact_risk_max": 0.167
+    },
+    "casual-outdoor": {
+      "identity_similarity": 0.887,
+      "embedding_identity_similarity": 0.733,
+      "deterministic_identity_similarity": 0.697,
+      "composition_compliance": 0.819,
+      "realism_score": 0.791,
+      "artifact_risk_max": 0.208
+    },
+    "casual-cafe": {
+      "identity_similarity": 0.859,
+      "embedding_identity_similarity": 0.712,
+      "deterministic_identity_similarity": 0.66,
+      "composition_compliance": 0.814,
+      "realism_score": 0.765,
+      "artifact_risk_max": 0.189
+    }
+  },
+  "calibrated_from": {
+    "records": 112,
+    "positives": 84
+  }
+}

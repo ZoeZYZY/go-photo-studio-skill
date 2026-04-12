@@ -126,7 +126,9 @@ npm run skill:pipeline:dryrun
 npm run skill:e2e:mock
 npm run skill:e2e:online:gemini
 npm run skill:e2e:online:openai
+npm run skill:eval:fixture
 npm run skill:calibrate
+npm run skill:calibrate:fixture
 npm run skill:dashboard
 npm run skill:test
 ```
@@ -147,6 +149,7 @@ npm run skill:test
   - `skills/go-photo-studio/examples/outputs/compose.resume-modern.zh.json`
 - 评估数据：
   - `skills/go-photo-studio/references/eval/eval.json`
+  - `skills/go-photo-studio/references/eval/eval.fixture.112.json`（14 个 preset × 每个 8 条）
 
 ## Provider 支持
 
@@ -190,10 +193,11 @@ npm run skill:dashboard
   - `skills/go-photo-studio/monitoring/dashboard.md`
 
 指标覆盖：总运行数、失败率、平均重试次数、按 provider 分组统计。
+并支持按 preset 的失败率与重试统计。
 
 ## 诚实的剩余问题（当前）
 
-- `Eval` 数据集当前是 starter 规模（12 条），适合流程联调，不足以代表生产统计稳定性。
+- 已提供 `eval.fixture.112.json` 用于分层联调与回归；但生产阈值仍需真实用户样本持续回灌。
 - `skill:e2e:mock` 提供的是链路级演示（request -> staged JSON -> output.png），不是真实模型生图质量基准。
 - `skill:e2e:online:*` 是最小真实链路示例，质量仍受 provider 模型版本与源图质量影响。
 - 文档有多语言版本，但脚本请求参数 `language` 目前只支持 `en|zh`，其余语言是文档层可读性支持。

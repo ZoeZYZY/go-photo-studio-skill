@@ -73,7 +73,9 @@ npm run skill:pipeline:dryrun
 npm run skill:e2e:mock
 npm run skill:e2e:online:gemini
 npm run skill:e2e:online:openai
+npm run skill:eval:fixture
 npm run skill:calibrate
+npm run skill:calibrate:fixture
 npm run skill:dashboard
 npm run skill:test
 ```
@@ -90,6 +92,7 @@ npm run skill:test
   - `skills/go-photo-studio/examples/outputs/compose.resume-modern.zh.json`
 - Eval data:
   - `skills/go-photo-studio/references/eval/eval.json`
+  - `skills/go-photo-studio/references/eval/eval.fixture.112.json` (14 presets x 8 records each)
 
 ## Structure
 
@@ -130,6 +133,7 @@ npm run skill:dashboard
 - Outputs:
   - `skills/go-photo-studio/monitoring/dashboard.json`
   - `skills/go-photo-studio/monitoring/dashboard.md`
+- Includes by-provider and by-preset failure/retry breakdown.
 
 ## Python Dependency Scope
 
@@ -141,7 +145,7 @@ pip install -r skills/go-photo-studio/scripts/requirements.txt
 
 ## Honest Remaining Gaps
 
-- `eval.json` is currently starter-scale (12 records), not production-grade statistically.
+- A 112-record preset-stratified fixture set is included for regression/calibration rehearsal, but production thresholds still require real user sample feedback over time.
 - `skill:e2e:mock` verifies request->pipeline->output artifact chain, not real model quality.
 - `skill:e2e:online:*` is a minimal real generation path; output quality still depends on provider model revision and source image quality.
 - README docs are multilingual, but script-level request `language` currently supports `en|zh` only.
