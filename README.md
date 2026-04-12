@@ -1,109 +1,106 @@
-# GO Photo Studio 📸
+<div align="center">
 
-**Professional AI Headshot & Identity Photo Generator**
+# GO Photo Studio Skill
 
-GO Photo Studio is a high-end AI-powered portrait studio that transforms casual selfies into professional, studio-quality headshots. Built with a focus on **Identity Integrity** and **Photographic Realism**, it ensures that you look like *you*—only in a professional setting.
+> 以身份保真为核心的专业人像生成 Skill：分层解析、身份锚定、受控风格化、验证门与自动重试。
 
-## File Header
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Skill](https://img.shields.io/badge/Codex-Skill-7c3aed)](./skills/go-photo-studio/SKILL.md)
+[![Pipeline](https://img.shields.io/badge/Pipeline-A%E2%86%92E-0ea5e9)](./skills/go-photo-studio/references/pipeline.md)
+[![Status](https://img.shields.io/badge/Status-Public%20%2F%20Active-22c55e)](./skills/go-photo-studio/references/status.md)
 
-| Field | Value |
-| :--- | :--- |
-| Document | `README.md` |
-| Project | `go-photo-studio-skill` |
-| Repository | `https://github.com/ZoeZYZY/go-photo-studio-skill` |
-| Main Skill Spec | `skills/go-photo-studio/SKILL.md` |
-| Status | `Public / Active` |
-| Last Updated | `2026-04-12` |
-| License | `MIT` |
+**语言 / Languages**：
+[简体中文](./README.md) · [English](./README.en.md)
 
-## Quick Navigation
+</div>
 
-- Skill entry: `skills/go-photo-studio/SKILL.md`
-- Presets: `skills/go-photo-studio/references/presets.json`
-- Pipeline: `skills/go-photo-studio/references/pipeline.md`
-- Status tracker: `skills/go-photo-studio/references/status.md`
+---
 
-## 🚀 Key Features
+## 项目简介
 
-- **Smart Canvas Expansion**: Automatically corrects tight selfie framing by expanding the canvas and using AI out-painting to generate missing shoulders and torso.
-- **Executive Realism**: Specialized "Studio Classic" mode designed for corporate leadership profiles, legal, and finance professionals.
-- **Reusable Preset Library**: Skill-driven presets for professional, resume, and ID-style output with explicit negative constraints.
-- **Post-Generation Customization**: Generate first, then choose your download dimensions (4:5, 1:1, 9:16, 2x2 Visa) and quality (HD, Ultra Print).
-- **Identity Preservation**: Advanced prompt engineering ensures natural skin textures, believable pores, and zero "AI plastic" look.
+GO Photo Studio Skill 是一套可复用的人像生成方法论和工具链，用于把“随意自拍 + 模糊需求”转成“可迁移、可审计、可验证”的专业头像生成流程。
 
-## 🛠️ Tech Stack
+核心目标：
+- 身份保真（不改脸型骨相，不漂年龄线索）
+- 风格可控（preset + negative constraints）
+- 质量可验（Stage E 验证门）
+- 工程化复用（脚本化 pipeline + 多 provider 适配）
 
-- **Frontend**: React 18 + Vite
-- **Styling**: Tailwind CSS (Comic Pop Aesthetic)
-- **UI Components**: Shadcn/UI + Framer Motion
-- **AI Engine**: Gemini / OpenAI (provider-switchable)
-- **Image Processing**: Browser Canvas API for pre-processing and composition correction.
+## 方法论（Methodology）
 
-## 🧩 Reusable Skill Package
+1. 结构化优先：先把风格和限制结构化，而不是直接自由 prompt。
+2. 五阶段管线：A 分层解析 → B 身份提取 → C 受控风格化 → D 导出计划 → E 验证与重试。
+3. 双轨验证：AI 评分 + 本地确定性身份分数并行。
+4. 风险前置：用户 constraints 先清洗，再进入生成。
+5. 失败可恢复：验证不通过时自动升级负面约束重试。
 
-This repository now includes a reusable skill package at:
+## 风格列表（当前公开版）
 
-- `skills/go-photo-studio/SKILL.md`
-- `skills/go-photo-studio/references/` (presets, policy, integration notes)
-- `skills/go-photo-studio/scripts/` (request validation + prompt composition)
+风格源文件：`skills/go-photo-studio/references/presets.json`
 
-Example usage:
+| Preset ID | Label | Category | 用途 | 约束重点 |
+| :--- | :--- | :--- | :--- | :--- |
+| `studio-classic` | Studio Classic | professional | 领英/管理层商务头像 | 禁止特写过近、蜡皮感 |
+| `tech-founder` | Tech Founder | professional | 创业者/科技职业头像 | 禁止 noir 风、禁止厚重布景 |
+| `resume-modern` | Modern Resume | resume | 简历/求职平台头像 | 禁止时尚化过度、卡通化 |
+| `id-standard` | ID Standard | id | 中性证件风格头像 | 禁止戏剧光影、创意色偏 |
+
+## 目录结构
+
+- Skill 入口：`skills/go-photo-studio/SKILL.md`
+- 参考规范：`skills/go-photo-studio/references/`
+- 可执行脚本：`skills/go-photo-studio/scripts/`
+- 状态追踪：`skills/go-photo-studio/references/status.md`
+
+## 快速开始
+
+1) 校验请求
 
 ```bash
 node skills/go-photo-studio/scripts/validate_request.cjs --input request.json
-node skills/go-photo-studio/scripts/compose_prompt.cjs --input request.json
-node skills/go-photo-studio/scripts/run-pipeline.cjs --request request.json --generated output.png
 ```
 
-The frontend reads style presets from `skills/go-photo-studio/references/presets.json` so skill and UI stay in sync.
+2) 生成标准 prompt payload
 
-## 📖 How to Use
+```bash
+node skills/go-photo-studio/scripts/compose_prompt.cjs --input request.json
+```
 
-1. **Upload**: Select a clear photo of your face (selfies are fine!).
-2. **Select Style**: Choose from Professional, Resume, or ID categories.
-3. **Generate**: Click "GENERATE NOW" to see your transformation.
-4. **Download**: Click "DOWNLOAD", select your desired aspect ratio and quality, and save your new professional portrait.
+3) 跑完整 A→E 管线（含验证门）
 
-## 🛡️ Privacy & Security
+```bash
+node skills/go-photo-studio/scripts/run-pipeline.cjs \
+  --request request.json \
+  --generated output.png \
+  --provider gemini
+```
 
-- **Identity First**: We prioritize maintaining your real facial features.
-- **Safety by Default**: The skill attaches fixed negative constraints to reduce over-retouching and unsafe transformations.
+4) 使用标注样本校准阈值
 
-## 📸 Examples & Results
+```bash
+node skills/go-photo-studio/scripts/calibrate-thresholds.cjs \
+  --input skills/go-photo-studio/references/eval/eval.json \
+  --output skills/go-photo-studio/references/verification-thresholds.json
+```
 
-| Category | Style | Key Visual |
-| :--- | :--- | :--- |
-| **Professional** | Studio Classic | Clean grey gradient, executive framing, natural skin. |
-| **Professional** | Tech Founder | Bright workspace bokeh, modern approachable profile. |
-| **Resume** | Modern Resume | Bright, approachable, high-end corporate feel. |
-| **ID** | ID Standard | Plain background, centered framing, neutral expression. |
+## Provider 支持
 
-## 🎨 Available Styles
+分析与验证脚本支持：
+- `gemini`
+- `openai`
+- `anthropic`
 
-The style source of truth is:
-- `skills/go-photo-studio/references/presets.json`
+前端运行时生图当前支持：
+- `gemini`
+- `openai`
 
-Current preset listing:
+环境变量参考：`.env.example`
 
-| Preset ID | Label | Category | Best For | Negative Constraint Focus |
-| :--- | :--- | :--- | :--- | :--- |
-| `studio-classic` | Studio Classic | professional | Corporate leadership, LinkedIn | No extreme close-up, no waxy skin |
-| `tech-founder` | Tech Founder | professional | Startup/founder profile | No noir look, no heavy boardroom staging |
-| `resume-modern` | Modern Resume | resume | CV / job applications | No fashionized output, no cartoon rendering |
-| `id-standard` | ID Standard | id | Neutral ID-style portrait | No dramatic shadows, no creative color cast |
+## 合规说明
 
-## ⚙️ How It Works (The Master Strategy)
+- 默认公开 preset 不包含实名明星风格。
+- 支持通过独立 preset 文件做私有扩展，但建议与公开版隔离。
 
-GO Photo Studio uses a **9:16 Master Expansion Strategy** to ensure perfect composition across all formats:
+## 许可证
 
-1.  **Image Analysis**: The system analyzes the uploaded face for hair style, makeup, and temperament.
-2.  **Canvas Out-painting**: Instead of a tight crop, the system generates a full **9:16 vertical portrait**. It intentionally scales the face down (approx. 40% of frame) and generates missing shoulders and background.
-3.  **Modular Prompting**: Prompts are assembled using four layers: `Base Style` + `Composition Correction` + `Realism Protection` + `Negative Constraints`.
-4.  **Dynamic Re-cropping**: When you download a 4:5 or 1:1 photo, the system crops it from the 9:16 "Master" image. Because we generated "extra" body and background, the subject remains perfectly framed without "chopped shoulders."
-
-## 📄 License
-
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
-
----
-*Built with ❤️ for professionals who need a better headshot.*
+MIT，见 [LICENSE](./LICENSE)。
