@@ -8,6 +8,7 @@ This folder provides runnable sample requests and expected artifacts.
 - `requests/id-standard.en.json`: English ID-style request.
 - `requests/invalid-missing-ratio.json`: Negative case for validation tests.
 - `requests/e2e-mock.en.json`: Data-URI based offline e2e pipeline demo request.
+- `requests/e2e-online.template.json`: Template for real provider-backed e2e run.
 
 ## Output samples
 
@@ -19,6 +20,17 @@ This folder provides runnable sample requests and expected artifacts.
 node skills/go-photo-studio/scripts/validate_request.cjs --input skills/go-photo-studio/examples/requests/resume-modern.zh.json
 node skills/go-photo-studio/scripts/compose_prompt.cjs --input skills/go-photo-studio/examples/requests/resume-modern.zh.json > skills/go-photo-studio/examples/outputs/compose.resume-modern.zh.json
 node skills/go-photo-studio/scripts/run-pipeline.cjs --request skills/go-photo-studio/examples/requests/e2e-mock.en.json --provider gemini --outdir .pipeline-out --max-retries 0 --generate-cmd "node skills/go-photo-studio/scripts/mock-generate.cjs --output {output}"
+```
+
+## Real provider-backed e2e
+
+1. Copy `requests/e2e-online.template.json` and replace `image_uri` with a real local path.
+2. Set provider API key in environment.
+3. Run one of:
+
+```bash
+npm run skill:e2e:online:gemini
+npm run skill:e2e:online:openai
 ```
 
 ## Note

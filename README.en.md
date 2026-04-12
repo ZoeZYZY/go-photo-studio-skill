@@ -69,6 +69,8 @@ npm run skill:validate:example
 npm run skill:compose:example
 npm run skill:pipeline:dryrun
 npm run skill:e2e:mock
+npm run skill:e2e:online:gemini
+npm run skill:e2e:online:openai
 npm run skill:calibrate
 npm run skill:test
 ```
@@ -80,6 +82,7 @@ npm run skill:test
   - `skills/go-photo-studio/examples/requests/id-standard.en.json`
   - `skills/go-photo-studio/examples/requests/invalid-missing-ratio.json`
   - `skills/go-photo-studio/examples/requests/e2e-mock.en.json` (offline e2e chain demo)
+  - `skills/go-photo-studio/examples/requests/e2e-online.template.json` (real online e2e template)
 - Example output:
   - `skills/go-photo-studio/examples/outputs/compose.resume-modern.zh.json`
 - Eval data:
@@ -100,6 +103,12 @@ npm run skill:test
 - Claude: `CLAUDE.md`
 - IDE agents: `IDE.md`
 
+## CLI Online Generation
+
+- Providers: `gemini`, `openai`
+- Script: `skills/go-photo-studio/scripts/generate-with-provider.cjs`
+- Used via `run-pipeline --generate-cmd` in `skill:e2e:online:*` scripts.
+
 ## Python Dependency Scope
 
 Python is optional and used only for deterministic local identity scoring:
@@ -112,6 +121,7 @@ pip install -r skills/go-photo-studio/scripts/requirements.txt
 
 - `eval.json` is currently starter-scale (12 records), not production-grade statistically.
 - `skill:e2e:mock` verifies request->pipeline->output artifact chain, not real model quality.
+- `skill:e2e:online:*` is a minimal real generation path; output quality still depends on provider model revision and source image quality.
 - README docs are multilingual, but script-level request `language` currently supports `en|zh` only.
 - Without API keys, A/B/E run fallback modes suitable for contract testing, not quality benchmarking.
 - `person_style_transformer_integration.py` is legacy research code and not part of the public skill runtime path.

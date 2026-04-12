@@ -89,6 +89,11 @@ For automatic retries with regenerated outputs, pass `--generate-cmd`:
 node skills/go-photo-studio/scripts/run-pipeline.cjs --request request.json --provider gemini --generate-cmd "your_generator --request {request} --stage-c {stage_c} --stage-d {stage_d} --output {output}"
 ```
 
+Minimal built-in generator for real provider-backed runs:
+```bash
+node skills/go-photo-studio/scripts/generate-with-provider.cjs --request request.json --stage-c stage-c.json --stage-d stage-d.json --provider gemini --output output.png
+```
+
 Supported `--provider` values: `gemini`, `openai`, `anthropic`.
 
 Calibrate thresholds from labeled eval records:

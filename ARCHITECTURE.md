@@ -43,3 +43,12 @@ For reproducible local E2E without external model calls:
 - Request: `skills/go-photo-studio/examples/requests/e2e-mock.en.json`
 - Generator stub: `skills/go-photo-studio/scripts/mock-generate.cjs`
 - Command: `npm run skill:e2e:mock`
+
+## End-to-end online path
+
+For real provider-backed generation:
+- Request template: `skills/go-photo-studio/examples/requests/e2e-online.template.json`
+- Generator: `skills/go-photo-studio/scripts/generate-with-provider.cjs`
+- Commands:
+  - `npm run skill:e2e:online:gemini`
+  - `npm run skill:e2e:online:openai`

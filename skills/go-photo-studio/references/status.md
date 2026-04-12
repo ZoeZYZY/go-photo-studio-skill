@@ -17,6 +17,7 @@ Public repository: https://github.com/ZoeZYZY/go-photo-studio-skill
 - NPM execution scripts added (`skill:*`) for local reproducibility.
 - Architecture boundary doc added (`ARCHITECTURE.md`) to clarify CLI runtime vs frontend demo.
 - Mock end-to-end chain demo added (`skill:e2e:mock` + `scripts/mock-generate.cjs`).
+- Minimal real provider-backed e2e path added (`skill:e2e:online:gemini|openai` + `scripts/generate-with-provider.cjs`).
 - Python dependency boundary clarified (`scripts/requirements.txt` for deterministic scorer only).
 
 ## Current Risk Assessment

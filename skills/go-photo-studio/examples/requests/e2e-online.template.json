@@ -1,0 +1,7 @@
+{
+  "image_uri": "/ABSOLUTE/PATH/TO/YOUR/source-photo.jpg",
+  "preset_id": "resume-modern",
+  "output_ratio": "1:1",
+  "language": "en",
+  "constraints": "Keep identity anchors stable and avoid beauty-filter look."
+}

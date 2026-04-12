@@ -122,6 +122,8 @@ npm run skill:validate:example
 npm run skill:compose:example
 npm run skill:pipeline:dryrun
 npm run skill:e2e:mock
+npm run skill:e2e:online:gemini
+npm run skill:e2e:online:openai
 npm run skill:calibrate
 npm run skill:test
 ```
@@ -137,6 +139,7 @@ npm run skill:test
   - `skills/go-photo-studio/examples/requests/id-standard.en.json`
   - `skills/go-photo-studio/examples/requests/invalid-missing-ratio.json`
   - `skills/go-photo-studio/examples/requests/e2e-mock.en.json`（离线端到端链路）
+  - `skills/go-photo-studio/examples/requests/e2e-online.template.json`（真实在线端到端模板）
 - 示例输出：
   - `skills/go-photo-studio/examples/outputs/compose.resume-modern.zh.json`
 - 评估数据：
@@ -153,6 +156,11 @@ npm run skill:test
 - `gemini`
 - `openai`
 
+CLI 在线生图脚本支持：
+- `gemini`
+- `openai`
+- 入口：`skills/go-photo-studio/scripts/generate-with-provider.cjs`
+
 环境变量参考：`.env.example`
 
 Python（可选，仅本地确定性身份评分）：
@@ -165,6 +173,7 @@ pip install -r skills/go-photo-studio/scripts/requirements.txt
 
 - `Eval` 数据集当前是 starter 规模（12 条），适合流程联调，不足以代表生产统计稳定性。
 - `skill:e2e:mock` 提供的是链路级演示（request -> staged JSON -> output.png），不是真实模型生图质量基准。
+- `skill:e2e:online:*` 是最小真实链路示例，质量仍受 provider 模型版本与源图质量影响。
 - 文档有多语言版本，但脚本请求参数 `language` 目前只支持 `en|zh`，其余语言是文档层可读性支持。
 - 无 API key 时 A/B/E 走 fallback，能验证编排与契约，不代表在线质量结果。
 - 根目录 `person_style_transformer_integration.py` 为历史研究代码，不参与当前公开 Skill 主链路。
