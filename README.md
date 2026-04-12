@@ -214,10 +214,6 @@ npm run skill:dashboard
 - 本仓库核心执行层为 Node.js（`*.cjs`）+ JSON 数据文件。
 - 已通过 `.gitattributes` 对演示前端（TS/TSX）做 `linguist-vendored`，避免其主导仓库语言标记。
 
-## 合规说明
-
-- 默认公开 preset 不包含实名明星风格。
-- 支持通过独立 preset 文件做私有扩展，但建议与公开版隔离。
 
 ## 许可证
 
