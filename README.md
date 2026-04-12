@@ -169,7 +169,7 @@ CLI 在线生图脚本支持：
 
 环境变量参考：`.env.example`
 
-Python（可选，仅本地确定性身份评分）：
+Python（可选，用于本地身份评分）：
 
 ```bash
 pip install -r skills/go-photo-studio/scripts/requirements.txt

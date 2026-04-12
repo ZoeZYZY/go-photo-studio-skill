@@ -137,7 +137,7 @@ npm run skill:dashboard
 
 ## Python Dependency Scope
 
-Python is optional and used only for deterministic local identity scoring:
+Python is optional and used for local identity scoring (deterministic + embedding):
 
 ```bash
 pip install -r skills/go-photo-studio/scripts/requirements.txt
