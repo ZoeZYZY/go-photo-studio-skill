@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "presets": [
+    {
+      "id": "studio-classic",
+      "category": "professional",
+      "label": "Studio Classic",
+      "style_prompt": "Executive studio portrait, neutral gradient background, soft-box lighting, clean business attire, balanced head-and-shoulders composition.",
+      "negative_constraints": [
+        "extreme close-up",
+        "waxy skin",
+        "fashion-magazine over-retouching",
+        "oversized head"
+      ]
+    },
+    {
+      "id": "tech-founder",
+      "category": "professional",
+      "label": "Tech Founder",
+      "style_prompt": "Modern professional portrait, bright workspace bokeh, natural indoor light, smart-casual wardrobe, approachable confident mood.",
+      "negative_constraints": [
+        "dark dramatic noir lighting",
+        "heavy corporate boardroom staging",
+        "plastic skin smoothing"
+      ]
+    },
+    {
+      "id": "resume-modern",
+      "category": "resume",
+      "label": "Modern Resume",
+      "style_prompt": "Clean resume portrait, minimal background, neutral color palette, natural expression, high-fidelity skin micro-texture.",
+      "negative_constraints": [
+        "overly stylized fashion look",
+        "exaggerated makeup",
+        "cartoon-like rendering"
+      ]
+    },
+    {
+      "id": "id-standard",
+      "category": "id",
+      "label": "ID Standard",
+      "style_prompt": "Government-style ID portrait with neutral expression, plain background, centered framing, even illumination.",
+      "negative_constraints": [
+        "dramatic shadows",
+        "creative color cast",
+        "non-neutral facial expression"
+      ]
+    }
+  ]
+}
