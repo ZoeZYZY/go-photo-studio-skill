@@ -2,6 +2,8 @@
 
 # GO Photo Studio Skill
 
+<img src="./assets/logo/logo-main-240.png" width="120" alt="GO Photo Studio Skill logo" />
+
 > 以身份保真为核心的专业人像生成 Skill：分层解析、身份锚定、受控风格化、验证门与自动重试。
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)

@@ -2,6 +2,8 @@
 
 # GO Photo Studio Skill
 
+<img src="./assets/logo/logo-main-240.png" width="120" alt="GO Photo Studio Skill logo" />
+
 > レイヤー解析・本人性保持・品質ゲート・自動リトライを備えた、本人性重視のポートレート生成 Skill。
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)

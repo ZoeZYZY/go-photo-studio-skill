@@ -2,6 +2,8 @@
 
 # GO Photo Studio Skill
 
+<img src="./assets/logo/logo-main-240.png" width="120" alt="GO Photo Studio Skill logo" />
+
 > An identity-preserving portrait generation skill with layered analysis, controllable stylization, quality gates, and retry orchestration.
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)

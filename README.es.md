@@ -2,6 +2,8 @@
 
 # GO Photo Studio Skill
 
+<img src="./assets/logo/logo-main-240.png" width="120" alt="GO Photo Studio Skill logo" />
+
 > Skill de retrato profesional con preservación de identidad, análisis por capas, compuerta de calidad y reintento automático.
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
