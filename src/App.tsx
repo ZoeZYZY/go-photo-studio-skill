@@ -61,6 +61,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   professional: "职业照 | Professional",
   resume: "简历照片 | Resume/CV",
   id: "证件照 | ID",
+  casual: "休闲形象 | Casual",
 };
 
 const ASPECT_RATIOS = [

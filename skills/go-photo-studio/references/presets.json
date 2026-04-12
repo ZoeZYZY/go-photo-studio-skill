@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "presets": [
     {
       "id": "studio-classic",
@@ -25,6 +25,50 @@
       ]
     },
     {
+      "id": "elite-leadership",
+      "category": "professional",
+      "label": "Elite Leadership",
+      "style_prompt": "High-end executive portrait, tailored dark suit, subtle architectural office depth, directional but controlled lighting, authoritative and composed mood.",
+      "negative_constraints": [
+        "casual streetwear",
+        "cluttered office background",
+        "harsh flash hotspots"
+      ]
+    },
+    {
+      "id": "creative-studio",
+      "category": "professional",
+      "label": "Creative Studio",
+      "style_prompt": "Creative professional portrait with minimalist studio or gallery background, artistic but clean lighting, confident and thoughtful tone.",
+      "negative_constraints": [
+        "overly dramatic cinematic distortion",
+        "neon cyberpunk color cast",
+        "cartoon rendering"
+      ]
+    },
+    {
+      "id": "medical-professional",
+      "category": "professional",
+      "label": "Medical Professional",
+      "style_prompt": "Professional medical portrait with clean clinical environment, calm expression, trustworthy and warm demeanor, balanced neutral lighting.",
+      "negative_constraints": [
+        "fashion editorial styling",
+        "dark moody shadows",
+        "high saturation artistic filters"
+      ]
+    },
+    {
+      "id": "academic-scholar",
+      "category": "professional",
+      "label": "Academic Scholar",
+      "style_prompt": "Distinguished academic portrait with refined attire, study or library context, warm and intelligent presence, natural facial detail.",
+      "negative_constraints": [
+        "flashy nightlife background",
+        "aggressive beauty retouch",
+        "high-gloss skin"
+      ]
+    },
+    {
       "id": "resume-modern",
       "category": "resume",
       "label": "Modern Resume",
@@ -36,6 +80,28 @@
       ]
     },
     {
+      "id": "resume-premium",
+      "category": "resume",
+      "label": "Premium Resume",
+      "style_prompt": "Premium business resume portrait with polished attire, soft studio lighting, neutral gradient background, clear professional confidence.",
+      "negative_constraints": [
+        "street photography rough grain",
+        "overexposed highlights",
+        "high-fashion pose exaggeration"
+      ]
+    },
+    {
+      "id": "resume-creative",
+      "category": "resume",
+      "label": "Creative Resume",
+      "style_prompt": "Creative-industry resume portrait with clean architectural context, modern styling, approachable but distinctive professional energy.",
+      "negative_constraints": [
+        "costume-like styling",
+        "surreal color grading",
+        "anime/cartoon output"
+      ]
+    },
+    {
       "id": "id-standard",
       "category": "id",
       "label": "ID Standard",
@@ -44,6 +110,50 @@
         "dramatic shadows",
         "creative color cast",
         "non-neutral facial expression"
+      ]
+    },
+    {
+      "id": "id-schengen",
+      "category": "id",
+      "label": "Schengen Style ID",
+      "style_prompt": "Neutral Schengen-style ID portrait with plain light background, centered face, controlled exposure, and clear biometric readability.",
+      "negative_constraints": [
+        "strong side shadows",
+        "tilted head angle",
+        "saturated stylization"
+      ]
+    },
+    {
+      "id": "id-blue-premium",
+      "category": "id",
+      "label": "Premium Blue ID",
+      "style_prompt": "Professional ID-style portrait with restrained textured blue backdrop, clean attire, balanced portrait lighting, and natural identity detail.",
+      "negative_constraints": [
+        "heavy film grain",
+        "fantasy lighting",
+        "beauty-filter smoothing"
+      ]
+    },
+    {
+      "id": "casual-outdoor",
+      "category": "casual",
+      "label": "Outdoor Natural",
+      "style_prompt": "Natural outdoor professional portrait with soft daylight, subtle background blur, realistic skin detail, and relaxed confidence.",
+      "negative_constraints": [
+        "harsh midday blown highlights",
+        "oversaturated travel filter",
+        "plastic skin"
+      ]
+    },
+    {
+      "id": "casual-cafe",
+      "category": "casual",
+      "label": "Casual Cafe",
+      "style_prompt": "Casual professional portrait in bright modern cafe setting with soft natural light and approachable social profile tone.",
+      "negative_constraints": [
+        "dark nightclub ambience",
+        "heavy vignette",
+        "editorial glamour retouch"
       ]
     }
   ]

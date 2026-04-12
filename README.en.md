@@ -40,8 +40,18 @@ Source: `skills/go-photo-studio/references/presets.json`
 | :--- | :--- | :--- |
 | `studio-classic` | Studio Classic | professional |
 | `tech-founder` | Tech Founder | professional |
+| `elite-leadership` | Elite Leadership | professional |
+| `creative-studio` | Creative Studio | professional |
+| `medical-professional` | Medical Professional | professional |
+| `academic-scholar` | Academic Scholar | professional |
 | `resume-modern` | Modern Resume | resume |
+| `resume-premium` | Premium Resume | resume |
+| `resume-creative` | Creative Resume | resume |
 | `id-standard` | ID Standard | id |
+| `id-schengen` | Schengen Style ID | id |
+| `id-blue-premium` | Premium Blue ID | id |
+| `casual-outdoor` | Outdoor Natural | casual |
+| `casual-cafe` | Casual Cafe | casual |
 
 ## Quick Start
 
@@ -50,6 +60,11 @@ node skills/go-photo-studio/scripts/validate_request.cjs --input request.json
 node skills/go-photo-studio/scripts/compose_prompt.cjs --input request.json
 node skills/go-photo-studio/scripts/run-pipeline.cjs --request request.json --generated output.png --provider gemini
 ```
+
+## Integration Docs
+
+- Claude: `CLAUDE.md`
+- IDE agents: `IDE.md`
 
 ## License
 
