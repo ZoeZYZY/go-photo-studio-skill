@@ -6,3 +6,5 @@ coverage/
 *.log
 .env*
 !.env.example
+
+.git_corrupt_backup_*
