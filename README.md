@@ -4,6 +4,25 @@
 
 GO Photo Studio is a high-end AI-powered portrait studio that transforms casual selfies into professional, studio-quality headshots. Built with a focus on **Identity Integrity** and **Photographic Realism**, it ensures that you look like *you*—only in a professional setting.
 
+## File Header
+
+| Field | Value |
+| :--- | :--- |
+| Document | `README.md` |
+| Project | `go-photo-studio-skill` |
+| Repository | `https://github.com/ZoeZYZY/go-photo-studio-skill` |
+| Main Skill Spec | `skills/go-photo-studio/SKILL.md` |
+| Status | `Public / Active` |
+| Last Updated | `2026-04-12` |
+| License | `MIT` |
+
+## Quick Navigation
+
+- Skill entry: `skills/go-photo-studio/SKILL.md`
+- Presets: `skills/go-photo-studio/references/presets.json`
+- Pipeline: `skills/go-photo-studio/references/pipeline.md`
+- Status tracker: `skills/go-photo-studio/references/status.md`
+
 ## 🚀 Key Features
 
 - **Smart Canvas Expansion**: Automatically corrects tight selfie framing by expanding the canvas and using AI out-painting to generate missing shoulders and torso.
