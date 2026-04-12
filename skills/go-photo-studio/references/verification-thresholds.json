@@ -1,6 +1,7 @@
 {
   "default": {
     "identity_similarity": 0.85,
+    "embedding_identity_similarity": 0.72,
     "deterministic_identity_similarity": 0.68,
     "composition_compliance": 0.8,
     "realism_score": 0.76,
@@ -9,6 +10,7 @@
   "by_ratio": {
     "4:5": {
       "identity_similarity": 0.87,
+      "embedding_identity_similarity": 0.73,
       "deterministic_identity_similarity": 0.71,
       "composition_compliance": 0.83,
       "realism_score": 0.79,
@@ -16,6 +18,7 @@
     },
     "1:1": {
       "identity_similarity": 0.86,
+      "embedding_identity_similarity": 0.72,
       "deterministic_identity_similarity": 0.69,
       "composition_compliance": 0.82,
       "realism_score": 0.77,

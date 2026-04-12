@@ -8,8 +8,9 @@ const { spawnSync } = require('child_process');
 const root = path.resolve(__dirname, '../../..');
 const scriptsDir = path.resolve(root, 'skills/go-photo-studio/scripts');
 const examplesDir = path.resolve(root, 'skills/go-photo-studio/examples');
-const evalFile = path.resolve(root, 'skills/go-photo-studio/references/eval/eval.json');
-const tmpDir = path.resolve(root, '.tmp-skill-smoke');
+  const evalFile = path.resolve(root, 'skills/go-photo-studio/references/eval/eval.json');
+  const tmpDir = path.resolve(root, '.tmp-skill-smoke');
+  const metricsLog = path.resolve(tmpDir, 'runs.ndjson');
 
 function runNode(scriptPath, args) {
   const run = spawnSync(process.execPath, [scriptPath, ...args], {
@@ -71,6 +72,7 @@ function main() {
     '--request', validRequest,
     '--provider', 'gemini',
     '--outdir', tmpDir,
+    '--metrics-log', metricsLog,
   ]);
   assert.strictEqual(pipeline.code, 0, `run-pipeline should exit 0 in dry run mode: ${pipeline.stdout}\n${pipeline.stderr}`);
   assert.ok(pipeline.json && Array.isArray(pipeline.json.attempts), 'run-pipeline should return attempts array');
@@ -88,12 +90,25 @@ function main() {
     '--request', mockRequest,
     '--provider', 'gemini',
     '--outdir', tmpDir,
+    '--metrics-log', metricsLog,
     '--generate-cmd', 'node skills/go-photo-studio/scripts/mock-generate.cjs --output "{output}"',
     '--max-retries', '0',
   ]);
   assert.strictEqual(mockPipeline.code, 0, `run-pipeline mock e2e should exit 0: ${mockPipeline.stdout}\n${mockPipeline.stderr}`);
   assert.ok(fs.existsSync(path.resolve(tmpDir, 'generated-attempt-0.png')), 'mock generated image should exist');
   assert.ok(fs.existsSync(path.resolve(tmpDir, 'stage-e-attempt-0.json')), 'stage-e attempt output should exist in mock e2e');
+  assert.ok(fs.existsSync(metricsLog), 'metrics log should exist');
+
+  const dashboardJson = path.resolve(tmpDir, 'dashboard.json');
+  const dashboardMd = path.resolve(tmpDir, 'dashboard.md');
+  const dashboard = runNode(path.resolve(scriptsDir, 'build-quality-dashboard.cjs'), [
+    '--history', metricsLog,
+    '--output', dashboardJson,
+    '--markdown', dashboardMd,
+  ]);
+  assert.strictEqual(dashboard.code, 0, `quality dashboard build should pass: ${dashboard.stdout}\n${dashboard.stderr}`);
+  assert.ok(fs.existsSync(dashboardJson), 'dashboard json should exist');
+  assert.ok(fs.existsSync(dashboardMd), 'dashboard markdown should exist');
 
   process.stdout.write(JSON.stringify({
     ok: true,
@@ -103,7 +118,8 @@ function main() {
       'compose_prompt',
       'calibrate_thresholds',
       'run_pipeline_dry_run',
-      'run_pipeline_mock_e2e'
+      'run_pipeline_mock_e2e',
+      'quality_dashboard_build'
     ],
     artifacts: {
       composedFixture,

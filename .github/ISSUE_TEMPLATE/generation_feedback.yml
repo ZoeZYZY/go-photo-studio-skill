@@ -1,0 +1,93 @@
+name: Generation Feedback
+description: Submit quality feedback for generated portraits (pass/fail, artifacts, retry behavior).
+title: "[Feedback]: "
+labels:
+  - feedback
+  - quality
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to report generation quality outcomes.
+        Include pipeline artifacts where possible (`pipeline-summary.json`, `stage-e-*.json`).
+
+  - type: dropdown
+    id: verdict
+    attributes:
+      label: Overall verdict
+      options:
+        - Pass
+        - Fail
+        - Mixed
+    validations:
+      required: true
+
+  - type: input
+    id: preset
+    attributes:
+      label: Preset ID
+      placeholder: resume-modern
+    validations:
+      required: true
+
+  - type: dropdown
+    id: provider
+    attributes:
+      label: Provider
+      options:
+        - gemini
+        - openai
+        - anthropic
+        - other
+    validations:
+      required: true
+
+  - type: input
+    id: ratio
+    attributes:
+      label: Output ratio
+      placeholder: "1:1"
+
+  - type: input
+    id: retries
+    attributes:
+      label: Retry count observed
+      placeholder: "0"
+
+  - type: textarea
+    id: quality
+    attributes:
+      label: Quality notes
+      description: Mention identity drift, composition issues, realism artifacts, etc.
+      placeholder: |
+        - identity similarity looked low
+        - shoulder completion failed
+        - skin looked over-smoothed
+    validations:
+      required: true
+
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Stage E metrics (optional)
+      description: Paste metrics JSON if available.
+      render: json
+
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Artifact paths or links
+      description: Attach local paths, issue attachments, or cloud links.
+      placeholder: |
+        .pipeline-out/pipeline-summary.json
+        .pipeline-out/stage-e-attempt-0.json
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I removed any private/sensitive face images before posting.
+          required: true
+        - label: I can reproduce this behavior consistently.
+          required: false

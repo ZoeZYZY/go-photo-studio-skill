@@ -74,6 +74,7 @@ npm run skill:e2e:mock
 npm run skill:e2e:online:gemini
 npm run skill:e2e:online:openai
 npm run skill:calibrate
+npm run skill:dashboard
 npm run skill:test
 ```
 
@@ -111,6 +112,25 @@ npm run skill:test
 - Script: `skills/go-photo-studio/scripts/generate-with-provider.cjs`
 - Used via `run-pipeline --generate-cmd` in `skill:e2e:online:*` scripts.
 
+## Embedding Identity Scorer (Python)
+
+- Script: `skills/go-photo-studio/scripts/embedding-identity-score.py`
+- Dependencies: `pip install -r skills/go-photo-studio/scripts/requirements.txt`
+- Stage E will attempt this metric and include it in gate decisions when available.
+
+## Generation Quality Dashboard
+
+- History log: `.pipeline-history/runs.ndjson` (appended by `run-pipeline.cjs`)
+- Build command:
+
+```bash
+npm run skill:dashboard
+```
+
+- Outputs:
+  - `skills/go-photo-studio/monitoring/dashboard.json`
+  - `skills/go-photo-studio/monitoring/dashboard.md`
+
 ## Python Dependency Scope
 
 Python is optional and used only for deterministic local identity scoring:
@@ -144,3 +164,4 @@ MIT. See [LICENSE](./LICENSE).
 - Code of conduct: `CODE_OF_CONDUCT.md`
 - Issue templates: `.github/ISSUE_TEMPLATE/`
 - PR template: `.github/pull_request_template.md`
+- Generation feedback template: `.github/ISSUE_TEMPLATE/generation_feedback.yml`

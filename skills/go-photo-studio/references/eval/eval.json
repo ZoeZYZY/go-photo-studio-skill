@@ -7,7 +7,8 @@
       "deterministic_identity_similarity": 0.75,
       "composition_compliance": 0.88,
       "realism_score": 0.84,
-      "artifact_risk": 0.14
+      "artifact_risk": 0.14,
+      "embedding_identity_similarity": 0.75
     }
   },
   {
@@ -18,7 +19,8 @@
       "deterministic_identity_similarity": 0.72,
       "composition_compliance": 0.86,
       "realism_score": 0.81,
-      "artifact_risk": 0.16
+      "artifact_risk": 0.16,
+      "embedding_identity_similarity": 0.74
     }
   },
   {
@@ -29,7 +31,8 @@
       "deterministic_identity_similarity": 0.71,
       "composition_compliance": 0.83,
       "realism_score": 0.79,
-      "artifact_risk": 0.18
+      "artifact_risk": 0.18,
+      "embedding_identity_similarity": 0.73
     }
   },
   {
@@ -40,7 +43,8 @@
       "deterministic_identity_similarity": 0.59,
       "composition_compliance": 0.68,
       "realism_score": 0.63,
-      "artifact_risk": 0.39
+      "artifact_risk": 0.39,
+      "embedding_identity_similarity": 0.58
     }
   },
   {
@@ -51,7 +55,8 @@
       "deterministic_identity_similarity": 0.74,
       "composition_compliance": 0.9,
       "realism_score": 0.83,
-      "artifact_risk": 0.12
+      "artifact_risk": 0.12,
+      "embedding_identity_similarity": 0.74
     }
   },
   {
@@ -62,7 +67,8 @@
       "deterministic_identity_similarity": 0.7,
       "composition_compliance": 0.87,
       "realism_score": 0.8,
-      "artifact_risk": 0.18
+      "artifact_risk": 0.18,
+      "embedding_identity_similarity": 0.73
     }
   },
   {
@@ -73,7 +79,8 @@
       "deterministic_identity_similarity": 0.69,
       "composition_compliance": 0.82,
       "realism_score": 0.77,
-      "artifact_risk": 0.2
+      "artifact_risk": 0.2,
+      "embedding_identity_similarity": 0.72
     }
   },
   {
@@ -84,7 +91,8 @@
       "deterministic_identity_similarity": 0.6,
       "composition_compliance": 0.65,
       "realism_score": 0.66,
-      "artifact_risk": 0.41
+      "artifact_risk": 0.41,
+      "embedding_identity_similarity": 0.58
     }
   },
   {
@@ -95,7 +103,8 @@
       "deterministic_identity_similarity": 0.68,
       "composition_compliance": 0.8,
       "realism_score": 0.76,
-      "artifact_risk": 0.21
+      "artifact_risk": 0.21,
+      "embedding_identity_similarity": 0.72
     }
   },
   {
@@ -106,7 +115,8 @@
       "deterministic_identity_similarity": 0.67,
       "composition_compliance": 0.79,
       "realism_score": 0.75,
-      "artifact_risk": 0.23
+      "artifact_risk": 0.23,
+      "embedding_identity_similarity": 0.71
     }
   },
   {
@@ -117,7 +127,8 @@
       "deterministic_identity_similarity": 0.69,
       "composition_compliance": 0.84,
       "realism_score": 0.78,
-      "artifact_risk": 0.2
+      "artifact_risk": 0.2,
+      "embedding_identity_similarity": 0.72
     }
   },
   {
@@ -128,7 +139,8 @@
       "deterministic_identity_similarity": 0.58,
       "composition_compliance": 0.62,
       "realism_score": 0.61,
-      "artifact_risk": 0.44
+      "artifact_risk": 0.44,
+      "embedding_identity_similarity": 0.57
     }
   }
 ]

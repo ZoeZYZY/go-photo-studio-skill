@@ -16,6 +16,7 @@
     "skill:e2e:online:gemini": "node skills/go-photo-studio/scripts/run-pipeline.cjs --request skills/go-photo-studio/examples/requests/e2e-online.template.json --provider gemini --outdir .pipeline-out --max-retries 0 --generate-cmd \"node skills/go-photo-studio/scripts/generate-with-provider.cjs --request {request} --stage-c {stage_c} --stage-d {stage_d} --provider gemini --output \\\"{output}\\\"\"",
     "skill:e2e:online:openai": "node skills/go-photo-studio/scripts/run-pipeline.cjs --request skills/go-photo-studio/examples/requests/e2e-online.template.json --provider openai --outdir .pipeline-out --max-retries 0 --generate-cmd \"node skills/go-photo-studio/scripts/generate-with-provider.cjs --request {request} --stage-c {stage_c} --stage-d {stage_d} --provider openai --output \\\"{output}\\\"\"",
     "skill:calibrate": "node skills/go-photo-studio/scripts/calibrate-thresholds.cjs --input skills/go-photo-studio/references/eval/eval.json --output skills/go-photo-studio/references/verification-thresholds.json",
+    "skill:dashboard": "node skills/go-photo-studio/scripts/build-quality-dashboard.cjs",
     "skill:test": "node skills/go-photo-studio/tests/smoke.cjs"
   },
   "dependencies": {

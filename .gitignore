@@ -8,3 +8,6 @@ coverage/
 !.env.example
 
 .git_corrupt_backup_*
+.pipeline-history/
+.pipeline-out/
+.tmp-skill-smoke/

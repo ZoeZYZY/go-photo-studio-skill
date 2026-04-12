@@ -18,6 +18,9 @@ Public repository: https://github.com/ZoeZYZY/go-photo-studio-skill
 - Architecture boundary doc added (`ARCHITECTURE.md`) to clarify CLI runtime vs frontend demo.
 - Mock end-to-end chain demo added (`skill:e2e:mock` + `scripts/mock-generate.cjs`).
 - Minimal real provider-backed e2e path added (`skill:e2e:online:gemini|openai` + `scripts/generate-with-provider.cjs`).
+- Embedding-based Python identity scorer added (`scripts/embedding-identity-score.py`) and wired into Stage E gate when available.
+- Pipeline telemetry log and quality dashboard added (`.pipeline-history/runs.ndjson` + `scripts/build-quality-dashboard.cjs`).
+- User feedback intake expanded with generation feedback issue template.
 - Python dependency boundary clarified (`scripts/requirements.txt` for deterministic scorer only).
 
 ## Current Risk Assessment
@@ -29,6 +32,7 @@ Public repository: https://github.com/ZoeZYZY/go-photo-studio-skill
 - Deterministic metric currently hash/histogram-based and should be upgraded to embedding-based scoring for production-grade identity checks.
 - Frontend provider runtime supports `gemini/openai`; anthropic is analysis-only in current UI path.
 - Script-level i18n currently supports `language=en|zh`; docs are multilingual but runtime locale support is narrower.
+- Embedding scorer currently depends on optional third-party models/packages (`insightface`, `onnxruntime`) and may be unavailable in minimal environments.
 
 ## Next Priority
 1. Expand `eval.json` from starter set to benchmark-grade dataset with per-style stratification.

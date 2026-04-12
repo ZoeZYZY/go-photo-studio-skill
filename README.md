@@ -127,6 +127,7 @@ npm run skill:e2e:mock
 npm run skill:e2e:online:gemini
 npm run skill:e2e:online:openai
 npm run skill:calibrate
+npm run skill:dashboard
 npm run skill:test
 ```
 
@@ -171,6 +172,25 @@ Python（可选，仅本地确定性身份评分）：
 pip install -r skills/go-photo-studio/scripts/requirements.txt
 ```
 
+Embedding 身份相似度评分（可选）：
+- 评分脚本：`skills/go-photo-studio/scripts/embedding-identity-score.py`
+- Stage E 会尝试读取该分数并参与放行阈值判断（无依赖时自动退化为仅 deterministic 评分）。
+
+## 生成质量监控面板
+
+- 运行历史：`.pipeline-history/runs.ndjson`（由 `run-pipeline.cjs` 自动追加）
+- 构建面板：
+
+```bash
+npm run skill:dashboard
+```
+
+- 输出：
+  - `skills/go-photo-studio/monitoring/dashboard.json`
+  - `skills/go-photo-studio/monitoring/dashboard.md`
+
+指标覆盖：总运行数、失败率、平均重试次数、按 provider 分组统计。
+
 ## 诚实的剩余问题（当前）
 
 - `Eval` 数据集当前是 starter 规模（12 条），适合流程联调，不足以代表生产统计稳定性。
@@ -201,3 +221,4 @@ MIT，见 [LICENSE](./LICENSE)。
 - 行为准则：`CODE_OF_CONDUCT.md`
 - Issue 模板：`.github/ISSUE_TEMPLATE/`
 - PR 模板：`.github/pull_request_template.md`
+- 生成质量反馈模板：`.github/ISSUE_TEMPLATE/generation_feedback.yml`

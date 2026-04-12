@@ -12,7 +12,7 @@ function parseArgs(argv) {
 
   const request = get('--request');
   if (!request) {
-    throw new Error('Usage: node run-pipeline.cjs --request <request.json> [--outdir <dir>] [--provider gemini] [--model gemini-2.5-flash] [--thresholds <file>] [--max-retries 2] [--generated <image_uri>] [--generate-cmd "cmd with {request} {stage_c} {stage_d} {output}"]');
+    throw new Error('Usage: node run-pipeline.cjs --request <request.json> [--outdir <dir>] [--provider gemini] [--model gemini-2.5-flash] [--thresholds <file>] [--metrics-log <runs.ndjson>] [--max-retries 2] [--generated <image_uri>] [--generate-cmd "cmd with {request} {stage_c} {stage_d} {output}"]');
   }
 
   return {
@@ -21,6 +21,7 @@ function parseArgs(argv) {
     provider: get('--provider') || 'gemini',
     model: get('--model') || 'gemini-2.5-flash',
     thresholds: get('--thresholds') || path.resolve(__dirname, '../references/verification-thresholds.json'),
+    metricsLog: get('--metrics-log') || path.resolve(process.cwd(), '.pipeline-history/runs.ndjson'),
     maxRetries: Number(get('--max-retries') || 2),
     generated: get('--generated'),
     generateCmd: get('--generate-cmd'),
@@ -34,6 +35,25 @@ function runJsonScript(scriptPath, args) {
 
 function writeJson(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + '\n');
+}
+
+function readJsonIfExists(filePath) {
+  try {
+    if (!filePath || !fs.existsSync(filePath)) return null;
+    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+  } catch (_err) {
+    return null;
+  }
+}
+
+function appendMetricsRecord(filePath, record) {
+  try {
+    const abs = path.resolve(filePath);
+    fs.mkdirSync(path.dirname(abs), { recursive: true });
+    fs.appendFileSync(abs, JSON.stringify(record) + '\n');
+  } catch (_err) {
+    // Do not fail the pipeline if telemetry writing fails.
+  }
 }
 
 function applyTemplate(cmd, vars) {
@@ -152,7 +172,29 @@ function main() {
       }
     }
 
-    writeJson(path.join(args.outdir, 'pipeline-summary.json'), final);
+    const summaryPath = path.join(args.outdir, 'pipeline-summary.json');
+    writeJson(summaryPath, final);
+
+    const lastAttempt = final.attempts.length > 0 ? final.attempts[final.attempts.length - 1] : null;
+    const stageE = readJsonIfExists(lastAttempt?.verification);
+    const metricsRecord = {
+      timestamp: new Date().toISOString(),
+      provider: args.provider,
+      model: args.model,
+      request_path: requestPath,
+      outdir: path.resolve(args.outdir),
+      accepted: Boolean(final.accepted),
+      accepted_attempt: final.accepted_attempt ?? null,
+      attempts_total: final.attempts.length,
+      retries_used: Math.max(0, final.attempts.length - 1),
+      generation_mode: args.generateCmd ? 'generate_cmd' : (args.generated ? 'provided_generated' : 'none'),
+      final_verification_pass: stageE?.pass ?? null,
+      final_action: stageE?.action ?? null,
+      final_metrics: stageE?.metrics ?? null,
+      summary_path: summaryPath,
+    };
+    appendMetricsRecord(args.metricsLog, metricsRecord);
+
     process.stdout.write(JSON.stringify(final, null, 2) + '\n');
   } catch (err) {
     process.stdout.write(JSON.stringify({ error: err.message }, null, 2) + '\n');

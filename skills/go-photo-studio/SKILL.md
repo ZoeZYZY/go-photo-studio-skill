@@ -94,6 +94,11 @@ Minimal built-in generator for real provider-backed runs:
 node skills/go-photo-studio/scripts/generate-with-provider.cjs --request request.json --stage-c stage-c.json --stage-d stage-d.json --provider gemini --output output.png
 ```
 
+Build quality monitoring dashboard from run history:
+```bash
+node skills/go-photo-studio/scripts/build-quality-dashboard.cjs --history .pipeline-history/runs.ndjson
+```
+
 Supported `--provider` values: `gemini`, `openai`, `anthropic`.
 
 Calibrate thresholds from labeled eval records:
@@ -122,3 +127,5 @@ The composed payload must include:
 - Smoke tests: `tests/smoke.cjs`
 - Architecture split: `../../ARCHITECTURE.md`
 - Optional Python deps for deterministic score: `scripts/requirements.txt`
+- Embedding scorer: `scripts/embedding-identity-score.py`
+- Quality dashboard: `scripts/build-quality-dashboard.cjs`

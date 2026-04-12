@@ -61,11 +61,26 @@ function loadThresholds(filePath, ratio) {
   const ratioProfile = cfg.by_ratio?.[ratio] || {};
   return {
     identity_similarity: ratioProfile.identity_similarity ?? global.identity_similarity ?? 0.82,
+    embedding_identity_similarity: ratioProfile.embedding_identity_similarity ?? global.embedding_identity_similarity ?? 0.68,
     deterministic_identity_similarity: ratioProfile.deterministic_identity_similarity ?? global.deterministic_identity_similarity ?? 0.66,
     composition_compliance: ratioProfile.composition_compliance ?? global.composition_compliance ?? 0.75,
     realism_score: ratioProfile.realism_score ?? global.realism_score ?? 0.72,
     artifact_risk_max: ratioProfile.artifact_risk_max ?? global.artifact_risk_max ?? 0.35,
   };
+}
+
+function runEmbeddingIdentityScore(sourceUri, generatedUri) {
+  const scriptPath = path.resolve(__dirname, 'embedding-identity-score.py');
+  try {
+    const raw = execFileSync('python3', [scriptPath, '--source', sourceUri, '--generated', generatedUri], { encoding: 'utf8' }).trim();
+    const parsed = JSON.parse(raw);
+    if (typeof parsed.embedding_identity_similarity === 'number') {
+      return parsed.embedding_identity_similarity;
+    }
+    return null;
+  } catch (_err) {
+    return null;
+  }
 }
 
 function runDeterministicIdentityScore(sourceUri, generatedUri) {
@@ -83,10 +98,14 @@ function runDeterministicIdentityScore(sourceUri, generatedUri) {
 }
 
 function decideAction(metrics, thresholds) {
+  const embeddingPass = typeof metrics.embedding_identity_similarity === 'number'
+    ? metrics.embedding_identity_similarity >= thresholds.embedding_identity_similarity
+    : true;
   const deterministicPass = typeof metrics.deterministic_identity_similarity === 'number'
     ? metrics.deterministic_identity_similarity >= thresholds.deterministic_identity_similarity
     : true;
   const pass = metrics.identity_similarity >= thresholds.identity_similarity
+    && embeddingPass
     && metrics.composition_compliance >= thresholds.composition_compliance
     && metrics.realism_score >= thresholds.realism_score
     && metrics.artifact_risk <= thresholds.artifact_risk_max
@@ -137,6 +156,7 @@ async function main() {
     });
 
     const metrics = generatedAnalysis.metrics || {};
+    metrics.embedding_identity_similarity = runEmbeddingIdentityScore(request.image_uri, args.generated);
     metrics.deterministic_identity_similarity = runDeterministicIdentityScore(request.image_uri, args.generated);
     const decision = decideAction(metrics, thresholds);
 
