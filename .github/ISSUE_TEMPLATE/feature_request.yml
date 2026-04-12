@@ -1,0 +1,70 @@
+name: Feature Request
+description: Propose an improvement to the skill workflow, quality gate, or developer experience.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the user value first, then implementation ideas.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature summary
+      placeholder: "Add embedding-based deterministic identity score in stage-e"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What gap or pain point exists today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe expected behavior and key design choices.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - High (core pipeline or safety)
+        - Medium (quality or maintainability)
+        - Low (DX or docs)
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Bullet points for done conditions.
+      placeholder: |
+        - [ ] new script supports ...
+        - [ ] README updated
+        - [ ] smoke test updated
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked existing issues/PRs.
+          required: true
+        - label: This request fits project scope (identity-preserving portrait skill).
+          required: true

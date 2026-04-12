@@ -1,0 +1,84 @@
+name: Bug Report
+description: Report a reproducible bug in the skill pipeline, scripts, or docs.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug.
+        Please provide a minimal reproducible case and include script outputs when possible.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug summary
+      description: One-sentence description of the problem.
+      placeholder: "stage-e verification always returns fallback under valid API key"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - scripts
+        - presets
+        - verification gate
+        - documentation
+        - frontend demo
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include exact command(s), input file(s), and sequence.
+      placeholder: |
+        1. npm run skill:test
+        2. node skills/go-photo-studio/scripts/run-pipeline.cjs --request ...
+        3. observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / output
+      description: Paste relevant CLI output or JSON snippets.
+      render: shell
+
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Node version, and provider.
+      placeholder: "macOS 14, Node 20.x, provider=gemini"
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked existing issues.
+          required: true
+        - label: I can reproduce this with current main branch.
+          required: true

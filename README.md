@@ -166,3 +166,10 @@ npm run skill:test
 ## 许可证
 
 MIT，见 [LICENSE](./LICENSE)。
+
+## 社区协作
+
+- 贡献指南：`CONTRIBUTING.md`
+- 行为准则：`CODE_OF_CONDUCT.md`
+- Issue 模板：`.github/ISSUE_TEMPLATE/`
+- PR 模板：`.github/pull_request_template.md`
