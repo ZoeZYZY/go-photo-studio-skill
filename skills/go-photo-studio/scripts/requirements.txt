@@ -1,0 +1,3 @@
+# Python dependencies for deterministic local identity scoring.
+# Used by: skills/go-photo-studio/scripts/deterministic-identity-score.py
+Pillow>=10.0.0

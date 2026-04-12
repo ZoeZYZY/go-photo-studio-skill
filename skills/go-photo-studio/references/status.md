@@ -15,6 +15,9 @@ Public repository: https://github.com/ZoeZYZY/go-photo-studio-skill
 - Runnable examples committed (`examples/requests/*` + `examples/outputs/*`).
 - Smoke test added for CLI contracts (`tests/smoke.cjs`).
 - NPM execution scripts added (`skill:*`) for local reproducibility.
+- Architecture boundary doc added (`ARCHITECTURE.md`) to clarify CLI runtime vs frontend demo.
+- Mock end-to-end chain demo added (`skill:e2e:mock` + `scripts/mock-generate.cjs`).
+- Python dependency boundary clarified (`scripts/requirements.txt` for deterministic scorer only).
 
 ## Current Risk Assessment
 - High risk: downgraded from RED to YELLOW (core safeguards exist but rely on model quality and key availability).
@@ -24,6 +27,7 @@ Public repository: https://github.com/ZoeZYZY/go-photo-studio-skill
 - Dataset is still starter-scale and should be expanded with real-world samples and reviewer agreement checks.
 - Deterministic metric currently hash/histogram-based and should be upgraded to embedding-based scoring for production-grade identity checks.
 - Frontend provider runtime supports `gemini/openai`; anthropic is analysis-only in current UI path.
+- Script-level i18n currently supports `language=en|zh`; docs are multilingual but runtime locale support is narrower.
 
 ## Next Priority
 1. Expand `eval.json` from starter set to benchmark-grade dataset with per-style stratification.

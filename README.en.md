@@ -68,6 +68,7 @@ node skills/go-photo-studio/scripts/calibrate-thresholds.cjs --input skills/go-p
 npm run skill:validate:example
 npm run skill:compose:example
 npm run skill:pipeline:dryrun
+npm run skill:e2e:mock
 npm run skill:calibrate
 npm run skill:test
 ```
@@ -78,6 +79,7 @@ npm run skill:test
   - `skills/go-photo-studio/examples/requests/resume-modern.zh.json`
   - `skills/go-photo-studio/examples/requests/id-standard.en.json`
   - `skills/go-photo-studio/examples/requests/invalid-missing-ratio.json`
+  - `skills/go-photo-studio/examples/requests/e2e-mock.en.json` (offline e2e chain demo)
 - Example output:
   - `skills/go-photo-studio/examples/outputs/compose.resume-modern.zh.json`
 - Eval data:
@@ -90,12 +92,29 @@ npm run skill:test
 - Scripts: `skills/go-photo-studio/scripts/`
 - Examples: `skills/go-photo-studio/examples/`
 - Smoke test: `skills/go-photo-studio/tests/smoke.cjs`
+- Architecture: `ARCHITECTURE.md`
 - Status: `skills/go-photo-studio/references/status.md`
 
 ## Integration Docs
 
 - Claude: `CLAUDE.md`
 - IDE agents: `IDE.md`
+
+## Python Dependency Scope
+
+Python is optional and used only for deterministic local identity scoring:
+
+```bash
+pip install -r skills/go-photo-studio/scripts/requirements.txt
+```
+
+## Honest Remaining Gaps
+
+- `eval.json` is currently starter-scale (12 records), not production-grade statistically.
+- `skill:e2e:mock` verifies request->pipeline->output artifact chain, not real model quality.
+- README docs are multilingual, but script-level request `language` currently supports `en|zh` only.
+- Without API keys, A/B/E run fallback modes suitable for contract testing, not quality benchmarking.
+- `person_style_transformer_integration.py` is legacy research code and not part of the public skill runtime path.
 
 ## Language Label Note
 

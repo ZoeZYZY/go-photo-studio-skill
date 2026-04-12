@@ -78,6 +78,22 @@ function main() {
 
   const summaryFile = path.resolve(tmpDir, 'pipeline-summary.json');
   assert.ok(fs.existsSync(summaryFile), 'pipeline summary should be generated');
+  assert.ok(fs.existsSync(path.resolve(tmpDir, 'stage-a.json')), 'stage-a output should exist');
+  assert.ok(fs.existsSync(path.resolve(tmpDir, 'stage-b.json')), 'stage-b output should exist');
+  assert.ok(fs.existsSync(path.resolve(tmpDir, 'stage-c-attempt-0.json')), 'stage-c attempt output should exist');
+  assert.ok(fs.existsSync(path.resolve(tmpDir, 'stage-d-attempt-0.json')), 'stage-d attempt output should exist');
+
+  const mockRequest = path.resolve(examplesDir, 'requests/e2e-mock.en.json');
+  const mockPipeline = runNode(path.resolve(scriptsDir, 'run-pipeline.cjs'), [
+    '--request', mockRequest,
+    '--provider', 'gemini',
+    '--outdir', tmpDir,
+    '--generate-cmd', 'node skills/go-photo-studio/scripts/mock-generate.cjs --output "{output}"',
+    '--max-retries', '0',
+  ]);
+  assert.strictEqual(mockPipeline.code, 0, `run-pipeline mock e2e should exit 0: ${mockPipeline.stdout}\n${mockPipeline.stderr}`);
+  assert.ok(fs.existsSync(path.resolve(tmpDir, 'generated-attempt-0.png')), 'mock generated image should exist');
+  assert.ok(fs.existsSync(path.resolve(tmpDir, 'stage-e-attempt-0.json')), 'stage-e attempt output should exist in mock e2e');
 
   process.stdout.write(JSON.stringify({
     ok: true,
@@ -86,7 +102,8 @@ function main() {
       'validate_request(invalid)',
       'compose_prompt',
       'calibrate_thresholds',
-      'run_pipeline_dry_run'
+      'run_pipeline_dry_run',
+      'run_pipeline_mock_e2e'
     ],
     artifacts: {
       composedFixture,

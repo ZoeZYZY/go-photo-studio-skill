@@ -115,3 +115,5 @@ The composed payload must include:
 - Eval dataset/template: `references/eval/eval.json` and `references/eval/README.md`
 - Example requests/outputs: `examples/`
 - Smoke tests: `tests/smoke.cjs`
+- Architecture split: `../../ARCHITECTURE.md`
+- Optional Python deps for deterministic score: `scripts/requirements.txt`

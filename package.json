@@ -12,6 +12,7 @@
     "skill:validate:example": "node skills/go-photo-studio/scripts/validate_request.cjs --input skills/go-photo-studio/examples/requests/resume-modern.zh.json",
     "skill:compose:example": "node skills/go-photo-studio/scripts/compose_prompt.cjs --input skills/go-photo-studio/examples/requests/resume-modern.zh.json",
     "skill:pipeline:dryrun": "node skills/go-photo-studio/scripts/run-pipeline.cjs --request skills/go-photo-studio/examples/requests/resume-modern.zh.json --provider gemini --outdir .pipeline-out",
+    "skill:e2e:mock": "node skills/go-photo-studio/scripts/run-pipeline.cjs --request skills/go-photo-studio/examples/requests/e2e-mock.en.json --provider gemini --outdir .pipeline-out --max-retries 0 --generate-cmd \"node skills/go-photo-studio/scripts/mock-generate.cjs --output \\\"{output}\\\"\"",
     "skill:calibrate": "node skills/go-photo-studio/scripts/calibrate-thresholds.cjs --input skills/go-photo-studio/references/eval/eval.json --output skills/go-photo-studio/references/verification-thresholds.json",
     "skill:test": "node skills/go-photo-studio/tests/smoke.cjs"
   },

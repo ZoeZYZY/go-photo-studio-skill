@@ -13,3 +13,6 @@ lib/** linguist-vendored
 
 # Project docs and data
 *.md linguist-documentation
+
+# Legacy research prototype (not part of current open-source skill runtime)
+person_style_transformer_integration.py linguist-vendored

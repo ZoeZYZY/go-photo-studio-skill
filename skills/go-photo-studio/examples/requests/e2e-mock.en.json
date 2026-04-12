@@ -1,0 +1,7 @@
+{
+  "image_uri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Wm5j4QAAAAASUVORK5CYII=",
+  "preset_id": "resume-modern",
+  "output_ratio": "1:1",
+  "language": "en",
+  "constraints": "Keep identity anchors stable, avoid heavy retouching."
+}
