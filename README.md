@@ -10,7 +10,7 @@
 [![Status](https://img.shields.io/badge/Status-Public%20%2F%20Active-22c55e)](./skills/go-photo-studio/references/status.md)
 
 **语言 / Languages**：
-[简体中文](./README.md) · [English](./README.en.md)
+[简体中文](./README.md) · [English](./README.en.md) · [日本語](./README.ja.md) · [Español](./README.es.md)
 
 </div>
 
