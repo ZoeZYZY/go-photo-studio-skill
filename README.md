@@ -230,3 +230,7 @@ MIT，见 [LICENSE](./LICENSE)。
 - Issue 模板：`.github/ISSUE_TEMPLATE/`
 - PR 模板：`.github/pull_request_template.md`
 - 生成质量反馈模板：`.github/ISSUE_TEMPLATE/generation_feedback.yml`
+
+## 致谢
+
+本项目由 @ZoeZYZY 发起并维护，研发与文档流程中使用了 AI 辅助工程支持。

@@ -173,3 +173,7 @@ MIT. See [LICENSE](./LICENSE).
 - Issue templates: `.github/ISSUE_TEMPLATE/`
 - PR template: `.github/pull_request_template.md`
 - Generation feedback template: `.github/ISSUE_TEMPLATE/generation_feedback.yml`
+
+## Acknowledgments
+
+This project is created and maintained by @ZoeZYZY, with AI-assisted engineering support across implementation and documentation workflows.
