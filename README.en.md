@@ -7,6 +7,8 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Skill](https://img.shields.io/badge/Codex-Skill-7c3aed)](./skills/go-photo-studio/SKILL.md)
 [![Pipeline](https://img.shields.io/badge/Pipeline-A%E2%86%92E-0ea5e9)](./skills/go-photo-studio/references/pipeline.md)
+[![CI](https://github.com/ZoeZYZY/go-photo-studio-skill/actions/workflows/ci.yml/badge.svg)](https://github.com/ZoeZYZY/go-photo-studio-skill/actions/workflows/ci.yml)
+[![Release](https://github.com/ZoeZYZY/go-photo-studio-skill/actions/workflows/release.yml/badge.svg)](https://github.com/ZoeZYZY/go-photo-studio-skill/actions/workflows/release.yml)
 
 **Languages**: [简体中文](./README.md) · [English](./README.en.md) · [日本語](./README.ja.md) · [Español](./README.es.md)
 
