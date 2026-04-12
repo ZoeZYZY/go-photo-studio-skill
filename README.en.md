@@ -18,6 +18,8 @@
 
 GO Photo Studio Skill turns “raw selfie + vague request” into an auditable, reusable, and provider-portable professional portrait workflow.
 
+Skip the studio visit: one avoided session can save roughly a month of token spend. ID photos become low-cost and on-demand, so anyone can build a founder-level professional profile.
+
 Core outcomes:
 - Identity integrity
 - Controlled style output

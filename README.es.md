@@ -18,6 +18,8 @@
 
 GO Photo Studio Skill convierte “selfie + solicitud ambigua” en un flujo de retrato profesional reutilizable, auditable y portable entre proveedores.
 
+Ya no necesitas ir al estudio: evitar una sola sesión puede ahorrar el equivalente a un mes de gasto en tokens. Las fotos tipo documento pasan a ser bajo demanda y de bajo costo, para que cualquiera pueda construir un perfil profesional de nivel emprendedor.
+
 ## Metodología
 
 1. Entradas estructuradas en lugar de prompts libres
