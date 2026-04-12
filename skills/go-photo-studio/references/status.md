@@ -1,6 +1,7 @@
 # Skill Status
 
 Updated: 2026-04-12
+Public repository: https://github.com/ZoeZYZY/go-photo-studio-skill
 
 ## Completed
 - Stage A/B upgraded to AI-vision-first with provider switch support (`gemini`, `openai`, `anthropic`) and fallback mode.
